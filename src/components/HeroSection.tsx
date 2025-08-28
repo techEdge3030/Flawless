@@ -29,7 +29,8 @@ export default function HeroSection() {
         {/* Center overlay image */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-full">
           <Image
-            src="https://api.builder.io/api/v1/image/assets/TEMP/1b3e7fd22e3325ea58eaeaec5c7232fe8b232e91?width=1418"
+            // src="https://api.builder.io/api/v1/image/assets/TEMP/1b3e7fd22e3325ea58eaeaec5c7232fe8b232e91?width=1418"
+            src="https://api.builder.io/api/v1/image/assets/TEMP/8b413c852bea076224c73850eba9b33ec328c3f1?width=2562"
             alt="Featured ring"
             fill
             className="object-cover object-center opacity-50"
