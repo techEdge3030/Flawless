@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function Header() {
   return (
@@ -10,7 +10,7 @@ export default function Header() {
         className="object-cover"
         priority
       />
-      
+
       {/* Header content overlay */}
       <div className="absolute inset-0 flex items-center justify-between px-8">
         {/* Logo/Navigation area */}
@@ -19,7 +19,7 @@ export default function Header() {
             Hatton Garden Jewellers
           </div>
         </div>
-        
+
         {/* Book Appointment button */}
         <div className="absolute right-8 top-[63px] w-[199px] h-[41px]">
           <button className="w-full h-full btn-primary rounded text-sm">

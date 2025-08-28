@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 interface TrustBadgeProps {
   icon: React.ReactNode;
@@ -6,7 +6,11 @@ interface TrustBadgeProps {
   className?: string;
 }
 
-export default function TrustBadge({ icon, text, className = "" }: TrustBadgeProps) {
+export default function TrustBadge({
+  icon,
+  text,
+  className = "",
+}: TrustBadgeProps) {
   return (
     <div className={`flex flex-col items-center text-center ${className}`}>
       <div className="w-16 h-16 mb-4 flex items-center justify-center">

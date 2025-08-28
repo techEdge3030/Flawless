@@ -12,7 +12,16 @@ interface OptionCardProps {
   badge?: string;
 }
 
-function OptionCard({ title, subtitle, description, buttonText, buttonLink, imageSrc, imageAlt, badge }: OptionCardProps) {
+function OptionCard({
+  title,
+  subtitle,
+  description,
+  buttonText,
+  buttonLink,
+  imageSrc,
+  imageAlt,
+  badge,
+}: OptionCardProps) {
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
       {/* Image Container */}
@@ -29,21 +38,21 @@ function OptionCard({ title, subtitle, description, buttonText, buttonLink, imag
           </div>
         )}
       </div>
-      
+
       {/* Content */}
       <div className="p-6 lg:p-8">
         <h3 className="font-serif text-2xl lg:text-3xl text-stone-700 italic font-medium mb-3 leading-tight">
           {title}
         </h3>
-        
+
         <h4 className="text-stone-600 font-semibold text-lg mb-4 uppercase tracking-wide">
           {subtitle}
         </h4>
-        
+
         <p className="text-stone-800 text-base lg:text-lg leading-relaxed mb-6 font-medium">
           {description}
         </p>
-        
+
         <Link
           href={buttonLink}
           className="inline-block bg-stone-800 text-white px-6 py-3 text-sm font-semibold uppercase tracking-wide hover:bg-stone-700 transition-colors duration-300"
@@ -62,10 +71,10 @@ export default function WhatsMoreImportantSection() {
         {/* Section Header */}
         <div className="text-center mb-16 lg:mb-20">
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-black font-normal leading-tight tracking-wide">
-            What's more important to you?...
+            What&apos;s more important to you?...
           </h2>
         </div>
-        
+
         {/* Options Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
           {/* Option 1: Customising Your Own Ring */}
@@ -79,7 +88,7 @@ export default function WhatsMoreImportantSection() {
             imageAlt="Ring being designed with tweezers holding diamond"
             badge="Most Popular"
           />
-          
+
           {/* Option 2: Receiving Your Ring Quickly */}
           <OptionCard
             title="Receiving Your Ring Quickly"
@@ -91,7 +100,7 @@ export default function WhatsMoreImportantSection() {
             imageAlt="Elegant gift boxes with ribbons and engagement ring"
             badge="Fastest"
           />
-          
+
           {/* Option 3: Choosing a Signature Ring */}
           <OptionCard
             title="Choosing a Signature Ring"
@@ -104,12 +113,13 @@ export default function WhatsMoreImportantSection() {
             badge="We Select Your Diamond"
           />
         </div>
-        
+
         {/* Additional Information */}
         <div className="mt-16 lg:mt-20 text-center">
           <p className="text-stone-600 text-lg font-medium max-w-3xl mx-auto leading-relaxed">
-            Every piece is a testament to British craftsmanship, designed to become a cherished heirloom 
-            that tells your unique love story for generations to come.
+            Every piece is a testament to British craftsmanship, designed to
+            become a cherished heirloom that tells your unique love story for
+            generations to come.
           </p>
         </div>
       </div>

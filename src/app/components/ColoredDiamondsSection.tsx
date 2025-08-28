@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function ColoredDiamondsSection() {
   return (
@@ -22,15 +22,17 @@ export default function ColoredDiamondsSection() {
                 className="object-cover"
               />
             </div>
-            
+
             <h3 className="font-helvetica text-4xl font-normal text-black leading-[150%] tracking-[-0.396px] mb-6">
               Fancy Coloured Diamond Rings
             </h3>
-            
+
             <p className="font-helvetica text-lg font-medium text-black leading-[150%] tracking-[-0.198px] mb-8">
-              Our collection of jewellery features stunning engagement rings, wedding bands, pendants, bracelets and more, all crafted with the finest diamonds and gemstones.
+              Our collection of jewellery features stunning engagement rings,
+              wedding bands, pendants, bracelets and more, all crafted with the
+              finest diamonds and gemstones.
             </p>
-            
+
             <div className="w-full h-[70px] bg-light rounded-lg flex items-center justify-center">
               <button className="font-hiragino text-lg font-semibold text-black tracking-[-0.198px]">
                 SHOP COLOURED DIAMOND RINGS
@@ -48,15 +50,17 @@ export default function ColoredDiamondsSection() {
                 className="object-cover"
               />
             </div>
-            
+
             <h3 className="font-helvetica text-4xl font-normal text-black leading-[150%] tracking-[-0.396px] mb-6">
               Gemstone Engagement Rings
             </h3>
-            
+
             <p className="font-helvetica text-lg font-medium text-black leading-[150%] tracking-[-0.198px] mb-8">
-              Our Hatton Garden jewellers have endeavoured to partner only with responsible and sustainable gemstone suppliers to help us source truly remarkable pieces worthy of your love story.
+              Our Hatton Garden jewellers have endeavoured to partner only with
+              responsible and sustainable gemstone suppliers to help us source
+              truly remarkable pieces worthy of your love story.
             </p>
-            
+
             <div className="w-full h-[70px] bg-light rounded-lg flex items-center justify-center">
               <button className="font-hiragino text-lg font-semibold text-black tracking-[-0.198px]">
                 SHOP GEMSTONE ENGAGEMENT RINGS

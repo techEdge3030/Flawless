@@ -1,15 +1,39 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function AboutUsSection() {
   const trustFeatures = [
-    { icon: "https://api.builder.io/api/v1/image/assets/TEMP/037f5912fe98345ec93350a36df07692afea7a9f?width=85", text: "30 Day Returns" },
-    { icon: "https://api.builder.io/api/v1/image/assets/TEMP/a56b4c3e5efe8b9c7e3cfbcf2312c4f8dd010431?width=1389", text: "Sustainable & Responsible" },
-    { icon: "https://api.builder.io/api/v1/image/assets/TEMP/d6334331b1c47d6909e090cee07bbe3aa2c7ca28?width=112", text: "Free Uk Delivery" },
-    { icon: "https://api.builder.io/api/v1/image/assets/TEMP/8c424f0ecc03cdabdae24c407e60c834d8281f06?width=81", text: "GIA & IGI Certified Stones" },
-    { icon: "https://api.builder.io/api/v1/image/assets/TEMP/70717e61dab0df21606bd525fbd5614f33556736?width=94", text: "Lifetime Guarantee" },
-    { icon: "https://api.builder.io/api/v1/image/assets/TEMP/a9a05999975143a4e899d35fa08993980e7577dd?width=410", text: "Free Ring Resizing" },
-    { icon: "https://api.builder.io/api/v1/image/assets/TEMP/192933b5656a48c4dbb23f9cb0fcbb5f0c43c5d2?width=294", text: "Aftercare" },
-    { icon: "https://api.builder.io/api/v1/image/assets/TEMP/4cb4ca9a51f99218730ceb1c78a3983340a8ed12?width=340", text: "London Heritage Craftspeople" }
+    {
+      icon: "https://api.builder.io/api/v1/image/assets/TEMP/037f5912fe98345ec93350a36df07692afea7a9f?width=85",
+      text: "30 Day Returns",
+    },
+    {
+      icon: "https://api.builder.io/api/v1/image/assets/TEMP/a56b4c3e5efe8b9c7e3cfbcf2312c4f8dd010431?width=1389",
+      text: "Sustainable & Responsible",
+    },
+    {
+      icon: "https://api.builder.io/api/v1/image/assets/TEMP/d6334331b1c47d6909e090cee07bbe3aa2c7ca28?width=112",
+      text: "Free Uk Delivery",
+    },
+    {
+      icon: "https://api.builder.io/api/v1/image/assets/TEMP/8c424f0ecc03cdabdae24c407e60c834d8281f06?width=81",
+      text: "GIA & IGI Certified Stones",
+    },
+    {
+      icon: "https://api.builder.io/api/v1/image/assets/TEMP/70717e61dab0df21606bd525fbd5614f33556736?width=94",
+      text: "Lifetime Guarantee",
+    },
+    {
+      icon: "https://api.builder.io/api/v1/image/assets/TEMP/a9a05999975143a4e899d35fa08993980e7577dd?width=410",
+      text: "Free Ring Resizing",
+    },
+    {
+      icon: "https://api.builder.io/api/v1/image/assets/TEMP/192933b5656a48c4dbb23f9cb0fcbb5f0c43c5d2?width=294",
+      text: "Aftercare",
+    },
+    {
+      icon: "https://api.builder.io/api/v1/image/assets/TEMP/4cb4ca9a51f99218730ceb1c78a3983340a8ed12?width=340",
+      text: "London Heritage Craftspeople",
+    },
   ];
 
   return (
@@ -21,10 +45,20 @@ export default function AboutUsSection() {
             {trustFeatures.map((feature, index) => (
               <div key={index} className="flex flex-col items-center">
                 <div className="w-16 h-16 mb-4 relative">
-                  <svg className="w-full h-full" viewBox="0 0 64 64" fill="none">
+                  <svg
+                    className="w-full h-full"
+                    viewBox="0 0 64 64"
+                    fill="none"
+                  >
                     {/* Trust icons would go here - simplified for brevity */}
-                    <circle cx="32" cy="32" r="30" fill="#806C63" opacity="0.1"/>
-                    <circle cx="32" cy="32" r="20" fill="#806C63"/>
+                    <circle
+                      cx="32"
+                      cy="32"
+                      r="30"
+                      fill="#806C63"
+                      opacity="0.1"
+                    />
+                    <circle cx="32" cy="32" r="20" fill="#806C63" />
                   </svg>
                 </div>
                 <p className="font-helvetica text-sm font-normal text-black leading-[150%] tracking-[-0.132px]">
@@ -56,26 +90,42 @@ export default function AboutUsSection() {
                 ABOUT US
               </span>
             </div>
-            
+
             <h2 className="font-eb-garamond text-4xl italic font-medium text-black mb-8 tracking-[-0.44px]">
               Where it all begins...
             </h2>
 
             <div className="space-y-6 mb-12">
               <p className="font-helvetica text-xl font-medium text-black leading-[134%] tracking-[-0.22px]">
-                Nestled in the heart of Hatton Garden, Flawless Fine Jewellery stands as a testament to the dedication to fine jewellery making in London's historic jewellery quarter. Since 2014 our journey has been one of refining our craft to offer uncompromising quality, assembling a team of experts and enhancing our customer service.
+                Nestled in the heart of Hatton Garden, Flawless Fine Jewellery
+                stands as a testament to the dedication to fine jewellery making
+                in London&apos;s historic jewellery quarter. Since 2014 our
+                journey has been one of refining our craft to offer
+                uncompromising quality, assembling a team of experts and
+                enhancing our customer service.
               </p>
-              
+
               <p className="font-helvetica text-xl font-medium text-black leading-[134%] tracking-[-0.22px]">
-                As reputable Hatton Garden jewellers, we pride ourselves on offering an exclusive collection of natural and lab-grown diamonds, as well as a variety of hand selected gemstones. Our commitment to ethical sourcing ensures that all our diamonds are conflict-free, providing our customers with peace of mind.
+                As reputable Hatton Garden jewellers, we pride ourselves on
+                offering an exclusive collection of natural and lab-grown
+                diamonds, as well as a variety of hand selected gemstones. Our
+                commitment to ethical sourcing ensures that all our diamonds are
+                conflict-free, providing our customers with peace of mind.
               </p>
-              
+
               <p className="font-helvetica text-xl font-medium text-black leading-[134%] tracking-[-0.22px]">
-                Flawless is the fine jeweller for modern romantics who value craftsmanship, sustainability, and a personal experience. Every ring is exclusively handmade in Britain using heritage techniques. We strive to be the home of timeless designs, ethical luxury, and a Hatton Garden jeweller you can trust for life.
+                Flawless is the fine jeweller for modern romantics who value
+                craftsmanship, sustainability, and a personal experience. Every
+                ring is exclusively handmade in Britain using heritage
+                techniques. We strive to be the home of timeless designs,
+                ethical luxury, and a Hatton Garden jeweller you can trust for
+                life.
               </p>
-              
+
               <p className="font-helvetica text-xl font-medium text-black leading-[134%] tracking-[-0.22px]">
-                Whether you're seeking a traditional diamond solitaire ring or a unique gemstone engagement ring, our team is dedicated to bringing your vision to life, your love made visible.
+                Whether you&apos;re seeking a traditional diamond solitaire ring
+                or a unique gemstone engagement ring, our team is dedicated to
+                bringing your vision to life, your love made visible.
               </p>
             </div>
 

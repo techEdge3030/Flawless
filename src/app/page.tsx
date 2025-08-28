@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Header from "../components/Header";
-import HeroSection from "../components/HeroSection";
-import WhatsMoreImportantSection from "../components/WhatsMoreImportantSection";
-import ShopByStyleSection from "../components/ShopByStyleSection";
+import Header from "./view/Header";
+import HeroSection from "./view/HeroSection";
+import WhatsMoreImportantSection from "./view/WhatsMoreImportantSection";
+import ShopByStyleSection from "./view/ShopByStyleSection";
 
 export default function Home() {
   return (
