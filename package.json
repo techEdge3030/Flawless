@@ -9,7 +9,7 @@
     "lint": "eslint . --ext .js,.ts,.tsx",
     "type-check": "tsc --noEmit",
     "format": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "next": "15.5.2",
