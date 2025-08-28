@@ -18,7 +18,7 @@ export default function Header() {
       {/* Header Content */}
       <div className="relative z-10 w-full h-full flex flex-col">
         {/* Top Bar with Hatton Garden Jewellers */}
-        <div className="bg-stone-600 text-white text-center py-3 text-sm font-medium">
+        <div className="bg-[#A39186] text-white text-center py-2 text-sm font-medium font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]">
           Hatton Garden Jewellers
         </div>
 
@@ -28,7 +28,7 @@ export default function Header() {
           <div className="flex items-center">
             <Link
               href="/"
-              className="text-2xl font-bold text-black tracking-wider"
+              className="text-[20px] font-semibold text-black tracking-[6px] font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]"
             >
               FLAWLESS
             </Link>
@@ -38,136 +38,152 @@ export default function Header() {
           <nav className="hidden lg:flex items-center space-x-8">
             <Link
               href="/engagement"
-              className="text-black hover:text-gray-600 font-medium text-sm uppercase tracking-wide"
+              className="text-black hover:text-gray-600 font-semibold text-[12px] uppercase tracking-[0.36px] font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]"
             >
               ENGAGEMENT
             </Link>
             <Link
               href="/wedding"
-              className="text-black hover:text-gray-600 font-medium text-sm uppercase tracking-wide"
+              className="text-black hover:text-gray-600 font-semibold text-[12px] uppercase tracking-[0.36px] font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]"
             >
               WEDDING
             </Link>
             <Link
               href="/jewellery"
-              className="text-black hover:text-gray-600 font-medium text-sm uppercase tracking-wide"
+              className="text-black hover:text-gray-600 font-semibold text-[12px] uppercase tracking-[0.36px] font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]"
             >
               JEWELLERY
             </Link>
             <Link
               href="/diamonds"
-              className="text-black hover:text-gray-600 font-medium text-sm uppercase tracking-wide"
+              className="text-black hover:text-gray-600 font-semibold text-[12px] uppercase tracking-[0.36px] font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]"
             >
               DIAMONDS
             </Link>
             <Link
               href="/gemstone"
-              className="text-black hover:text-gray-600 font-medium text-sm uppercase tracking-wide"
+              className="text-black hover:text-gray-600 font-semibold text-[12px] uppercase tracking-[0.36px] font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]"
             >
               GEMSTONE
             </Link>
             <Link
               href="/about"
-              className="text-black hover:text-gray-600 font-medium text-sm uppercase tracking-wide"
+              className="text-black hover:text-gray-600 font-semibold text-[12px] uppercase tracking-[0.36px] font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]"
             >
               ABOUT
             </Link>
           </nav>
 
           {/* User Actions */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center">
             {/* Search Icon */}
             <button
               className="p-2 hover:bg-gray-100 rounded-full"
               aria-label="Search"
             >
-              <svg
-                className="w-5 h-5 text-black"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="m21 21-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
+              <Image
+                src="https://api.builder.io/api/v1/image/assets/TEMP/05703fbdc8a4905144e22af2e571bbc6563716dc?width=64"
+                alt="Search"
+                width={32}
+                height={27}
+                className="w-8 h-[27px]"
+              />
             </button>
 
+            {/* Divider */}
+            <div className="w-px h-6 bg-gray-300 mx-2"></div>
+
             {/* Account */}
-            <button className="flex items-center space-x-1 hover:bg-gray-100 px-3 py-2 rounded">
-              <svg
-                className="w-5 h-5 text-black"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                />
-              </svg>
-              <span className="text-sm text-black hidden md:block">
+            <button className="flex items-center space-x-2 hover:bg-gray-100 px-3 py-2 rounded">
+              <Image
+                src="https://api.builder.io/api/v1/image/assets/TEMP/1b694fb0757a5285d91941d0420b2296fb94c9f0?width=46"
+                alt="Account"
+                width={23}
+                height={30}
+                className="w-[23px] h-[30px]"
+              />
+              <span className="text-[12px] text-black font-semibold tracking-[0.36px] font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif] hidden md:block">
                 Account
               </span>
             </button>
 
+            {/* Divider */}
+            <div className="w-px h-6 bg-gray-300 mx-2"></div>
+
             {/* Book Appointment */}
             <Link
               href="/book-appointment"
-              className="bg-black text-white px-4 py-2 text-sm font-medium hover:bg-gray-800 transition-colors hidden sm:block"
+              className="bg-[#A39186] text-white px-4 py-2 text-[12px] font-semibold tracking-[0.36px] font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif] hover:bg-[#8B7F73] transition-colors hidden sm:flex items-center rounded"
             >
               Book Appointment
             </Link>
 
+            {/* Divider */}
+            <div className="w-px h-6 bg-gray-300 mx-2 hidden sm:block"></div>
+
             {/* Wishlist */}
-            <button className="flex items-center space-x-1 hover:bg-gray-100 px-3 py-2 rounded">
-              <svg
-                className="w-5 h-5 text-black"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                />
-              </svg>
-              <span className="text-sm text-black hidden lg:block">
+            <button className="flex items-center space-x-2 hover:bg-gray-100 px-3 py-2 rounded">
+              <Image
+                src="https://api.builder.io/api/v1/image/assets/TEMP/ab0b3b8045bac3bdcc44bf73f8452471a9df899b?width=54"
+                alt="Wishlist"
+                width={27}
+                height={24}
+                className="w-[27px] h-6"
+              />
+              <span className="text-[12px] text-black font-semibold tracking-[0.36px] font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif] hidden lg:block">
                 Wishlist
               </span>
             </button>
 
+            {/* Divider */}
+            <div className="w-px h-6 bg-gray-300 mx-2"></div>
+
             {/* Cart */}
-            <button className="flex items-center space-x-1 hover:bg-gray-100 px-3 py-2 rounded relative">
-              <svg
-                className="w-5 h-5 text-black"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.293 2.293A1 1 0 004 16h12M17 13v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4z"
-                />
-              </svg>
-              <span className="text-sm text-black hidden lg:block">Cart</span>
+            <button className="flex items-center space-x-2 hover:bg-gray-100 px-3 py-2 rounded relative">
+              <Image
+                src="https://api.builder.io/api/v1/image/assets/TEMP/6bde2bb6562689746d93fdf82530dc37f3529327?width=50"
+                alt="Cart"
+                width={25}
+                height={22}
+                className="w-[25px] h-[22px]"
+              />
+              <span className="text-[12px] text-black font-semibold tracking-[0.36px] font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif] hidden lg:block">
+                Cart
+              </span>
               <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
                 0
               </span>
             </button>
 
+            {/* Divider */}
+            <div className="w-px h-6 bg-gray-300 mx-2"></div>
+
+            {/* Language Dropdown */}
+            <div className="relative">
+              <button className="flex items-center space-x-1 hover:bg-gray-100 px-3 py-2 rounded">
+                <span className="text-[12px] text-black font-semibold tracking-[0.36px] font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]">
+                  GBP
+                </span>
+                <svg
+                  width="12"
+                  height="7"
+                  viewBox="0 0 12 7"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-[10px] h-[5px]"
+                >
+                  <path
+                    d="M1.31494 0.316406L1.65381 0.636719L5.99756 4.73438L10.3481 0.639648L10.687 0.319336L11.0298 0.635742L11.3394 0.921875L11.7339 1.28613L11.3433 1.65332L6.33936 6.36426L5.99658 6.6875L5.65381 6.36328L0.657715 1.64941L0.26709 1.28125L0.661621 0.917969L0.972168 0.631836L1.31494 0.316406Z"
+                    fill="#403526"
+                    stroke="#403526"
+                  />
+                </svg>
+              </button>
+            </div>
+
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden p-2 hover:bg-gray-100 rounded"
+              className="lg:hidden p-2 hover:bg-gray-100 rounded ml-2"
               aria-label="Menu"
             >
               <svg
