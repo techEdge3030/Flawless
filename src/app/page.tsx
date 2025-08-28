@@ -1,10 +1,14 @@
 import Image from "next/image";
 import Header from "../components/Header";
+import HeroSection from "../components/HeroSection";
+import WhatsMoreImportantSection from "../components/WhatsMoreImportantSection";
 
 export default function Home() {
   return (
     <div className="font-sans min-h-screen">
       <Header />
+      <HeroSection />
+      <WhatsMoreImportantSection />
       <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-[calc(100vh-124px)] p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <Image
