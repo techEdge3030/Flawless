@@ -33,8 +33,8 @@ export default function ColoredDiamondsSection() {
               finest diamonds and gemstones.
             </p>
 
-            <div className="w-full h-[70px] bg-light rounded-lg flex items-center justify-center">
-              <button className="font-hiragino text-lg font-semibold text-black tracking-[-0.198px]">
+            <div className="flex">
+              <button className="w-[422px] h-[65px] rounded-[6px] bg-[#EDE7E5] text-black text-center text-base font-semibold leading-[150%] tracking-[-0.176px]" style={{ fontFamily: 'Hiragino Sans GB, -apple-system, Roboto, Helvetica, sans-serif' }}>
                 SHOP COLOURED DIAMOND RINGS
               </button>
             </div>
@@ -61,8 +61,8 @@ export default function ColoredDiamondsSection() {
               truly remarkable pieces worthy of your love story.
             </p>
 
-            <div className="w-full h-[70px] bg-light rounded-lg flex items-center justify-center">
-              <button className="font-hiragino text-lg font-semibold text-black tracking-[-0.198px]">
+            <div className="flex">
+              <button className="w-[422px] h-[65px] rounded-[6px] bg-[#EDE7E5] text-black text-center text-base font-semibold leading-[150%] tracking-[-0.176px]" style={{ fontFamily: 'Hiragino Sans GB, -apple-system, Roboto, Helvetica, sans-serif' }}>
                 SHOP GEMSTONE ENGAGEMENT RINGS
               </button>
             </div>

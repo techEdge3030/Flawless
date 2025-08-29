@@ -1,90 +1,106 @@
-import Image from "next/image";
+"use client";
+
+import { useState } from "react";
 
 export default function BespokeSection() {
+  const [openItem, setOpenItem] = useState<number | null>(null);
+
   const bespokeFeatures = [
-    "MADE IN HATTON GARDEN, LONDON",
-    "PERSONALISATION MADE EASY",
-    "SUSTAINABLE & CONFLICT-FREE DIAMONDS",
-    "BESPOKE JEWELLERY PROCESS",
-    "YOUR VISION BROUGHT TO LIFE",
-    "WARRANTY & AFTER CARE",
+    {
+      title: "MADE IN HATTON GARDEN, LONDON",
+      content: "Our jewellery is handcrafted in the heart of London's historic diamond district, Hatton Garden, where skilled artisans have been creating exquisite pieces for generations."
+    },
+    {
+      title: "PERSONALISATION MADE EASY",
+      content: "Work with our expert designers to create a piece that reflects your unique style and story, with every detail tailored to your preferences."
+    },
+    {
+      title: "SUSTAINABLE & CONFLICT-FREE DIAMONDS",
+      content: "We are committed to ethical sourcing, ensuring all our diamonds are conflict-free and responsibly mined with full traceability."
+    },
+    {
+      title: "BESPOKE JEWELLERY PROCESS",
+      content: "From initial consultation to final creation, our transparent process keeps you involved at every step of your bespoke journey."
+    },
+    {
+      title: "YOUR VISION BROUGHT TO LIFE",
+      content: "Our skilled craftspeople transform your ideas into reality, creating heirloom pieces that will be treasured for generations."
+    },
+    {
+      title: "WARRANTY & AFTER CARE",
+      content: "Every piece comes with comprehensive warranty and lifetime aftercare service to ensure your jewellery remains beautiful forever."
+    }
   ];
 
+  const toggleItem = (index: number) => {
+    setOpenItem(openItem === index ? null : index);
+  };
+
   return (
-    <div>
-      {/* What is Bespoke Diamond Jewellery Section */}
-      <section className="py-16 bg-secondary">
-        <div className="max-w-4xl mx-auto px-8 text-center">
-          <h2 className="font-eb-garamond text-4xl italic font-medium text-secondary mb-8 tracking-[-0.44px]">
-            What is Bespoke Diamond Jewellery
-          </h2>
+    <section className="py-16 bg-[#ede7e4]">
+      <div className="max-w-7xl mx-auto px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          {/* Left Column - Content */}
+          <div>
+            <h2 className="font-eb-garamond text-4xl italic font-medium text-black mb-8 tracking-[-0.44px]">
+              What is Bespoke Diamond Jewellery
+            </h2>
 
-          <p className="font-helvetica text-2xl font-medium text-secondary leading-[168%] tracking-[-0.264px] mb-12">
-            The term &apos; bespoke&apos; refers to jewellery designed and
-            crafted from scratch. From necklaces to bracelets, engagement rings
-            to anniversary gifts, milestone birthdays and more, we offer an
-            intimate and personalised service, available both virtually or in
-            person. Our team of jewellers in Hatton Garden, London are experts
-            at working with customers all over the world to bring their bespoke
-            visions to life.
-          </p>
+            <p className="font-helvetica text-lg font-normal text-black leading-[150%] mb-8">
+              The term &apos;bespoke&apos; refers to jewellery designed and
+              crafted from scratch. From necklaces to bracelets, engagement rings
+              to anniversary gifts, milestone birthdays and more, we offer an
+              intimate and personalised service, available both virtually or in
+              person. Our team of jewellers in Hatton Garden, London are experts
+              at working with customers all over the world to bring their bespoke
+              visions to life.
+            </p>
 
-          <button className="btn-secondary px-8 py-4 rounded text-lg font-semibold mb-16">
-            BOOK A FREE CONSULTATION
-          </button>
+            <button className="bg-[#806C63] text-white px-8 py-3 text-sm font-medium uppercase tracking-wide hover:bg-[#6d5a52] transition-colors duration-200">
+              BOOK A FREE CONSULTATION
+            </button>
+          </div>
 
-          {/* Bespoke features with decorative lines */}
-          <div className="space-y-8">
+          {/* Right Column - Dropdown Menu */}
+          <div className="space-y-0">
             {bespokeFeatures.map((feature, index) => (
-              <div key={index} className="relative">
-                <div className="flex items-center justify-between">
-                  <div className="flex-1">
-                    <p className="font-helvetica text-2xl font-medium text-secondary leading-[150%] tracking-[-0.264px]">
-                      {feature}
+              <div key={index} className="border-b border-[#7f6c62] last:border-b-0">
+                <button
+                  onClick={() => toggleItem(index)}
+                  className="w-full py-4 flex items-center justify-between text-left hover:bg-black/5 transition-colors duration-200"
+                >
+                  <span className="font-helvetica text-sm font-medium text-[#7f6c62] uppercase tracking-wide">
+                    {feature.title}
+                  </span>
+                  <svg
+                    className={`w-4 h-4 text-[#7f6c62] transition-transform duration-200 ${
+                      openItem === index ? 'rotate-180' : ''
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+
+                {openItem === index && (
+                  <div className="pb-4">
+                    <p className="text-sm text-gray-700 leading-relaxed">
+                      {feature.content}
                     </p>
                   </div>
-
-                  <div className="flex-1 ml-8">
-                    <svg
-                      width="783"
-                      height="3"
-                      viewBox="0 0 784 3"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0.345337 1.19385H783.345H0.345337Z"
-                        fill="#806C63"
-                      />
-                      <path
-                        d="M0.345337 1.19385H783.345"
-                        stroke="#806C63"
-                        strokeWidth="2.4006"
-                      />
-                    </svg>
-                  </div>
-
-                  <div className="ml-4">
-                    <svg
-                      width="42"
-                      height="21"
-                      viewBox="0 0 42 21"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M3.84534 1.80273L21.3326 16.4102L38.8473 1.81348L39.1647 1.54883L39.484 1.81055L40.6617 2.77344L41.1305 3.15625L40.6656 3.54395L21.652 19.3916L21.3317 19.6592L21.0114 19.3916L2.02502 3.53223L1.56018 3.14355L2.02893 2.76074L3.20862 1.79883L3.52795 1.53809L3.84534 1.80273Z"
-                        fill="#806C63"
-                        stroke="#806C63"
-                      />
-                    </svg>
-                  </div>
-                </div>
+                )}
               </div>
             ))}
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
