@@ -209,6 +209,8 @@ export default function Header() {
                         setSelectedLanguage(language);
                         setIsLanguageDropdownOpen(false);
                       }}
+                      onMouseEnter={() => console.log(`Hovering ${language.code}`)}
+                      onMouseLeave={() => console.log(`Left ${language.code}`)}
                     >
                       <Image
                         src={language.flag}
