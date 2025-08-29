@@ -57,20 +57,31 @@ export default function CuratedCollectionSection() {
     );
   };
 
+  const getVisibleSlides = () => {
+    const slidesToShow = 4; // Show 4 items at a time on desktop
+    const slides = [];
+
+    for (let i = 0; i < slidesToShow; i++) {
+      const index = (currentSlide + i) % sliderItems.length;
+      slides.push(sliderItems[index]);
+    }
+    return slides;
+  };
+
   return (
     <section className="py-16 px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Left Section - Image Slider */}
-          <div className="relative">
+          <div className="lg:col-span-8 relative">
             {/* Only Left Arrow */}
             <button
               onClick={prevSlide}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-3 hover:bg-stone-100 rounded-full transition-colors duration-200 group"
+              className="absolute -left-4 top-1/2 -translate-y-1/2 z-10 p-3 bg-white shadow-lg hover:bg-stone-50 rounded-full transition-all duration-200 group border border-gray-200"
               aria-label="Previous items"
             >
               <svg
-                className="w-6 h-6 text-stone-500 group-hover:text-stone-700 transition-colors"
+                className="w-5 h-5 text-stone-600 group-hover:text-stone-800 transition-colors"
                 viewBox="0 0 26 46"
                 fill="none"
               >
@@ -84,13 +95,13 @@ export default function CuratedCollectionSection() {
             {/* Slider Container */}
             <div className="overflow-hidden">
               {/* Desktop: Show 4 items */}
-              <div className="hidden lg:grid lg:grid-cols-4 gap-6">
-                {sliderItems.slice(0, 4).map((item, index) => (
+              <div className="hidden lg:grid lg:grid-cols-4 gap-4">
+                {getVisibleSlides().map((item, index) => (
                   <div
-                    key={item.id}
+                    key={`${item.id}-${currentSlide}-${index}`}
                     className="group cursor-pointer"
                   >
-                    <div className="relative aspect-[3/4] bg-stone-50 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mb-4">
+                    <div className="relative aspect-[3/4] bg-stone-50 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mb-3">
                       <Image
                         src={item.image}
                         alt={item.alt}
@@ -100,10 +111,10 @@ export default function CuratedCollectionSection() {
                     </div>
 
                     <div className="text-left">
-                      <h4 className="font-eb-garamond text-xl font-normal text-black leading-[150%] tracking-[-0.22px] mb-1">
+                      <h4 className="font-eb-garamond text-lg font-normal text-black leading-[150%] tracking-[-0.22px] mb-1">
                         {item.title}
                       </h4>
-                      <p className="font-helvetica text-base font-medium text-black leading-[150%] tracking-[-0.176px]">
+                      <p className="font-helvetica text-sm font-medium text-black leading-[150%] tracking-[-0.176px]">
                         {item.price}
                       </p>
                     </div>
@@ -113,78 +124,82 @@ export default function CuratedCollectionSection() {
 
               {/* Tablet: Show 2 items */}
               <div className="hidden md:grid lg:hidden md:grid-cols-2 gap-6">
-                {sliderItems.slice(0, 2).map((item, index) => (
-                  <div
-                    key={item.id}
-                    className="group cursor-pointer"
-                  >
-                    <div className="relative aspect-[3/4] bg-stone-50 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mb-4">
-                      <Image
-                        src={item.image}
-                        alt={item.alt}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
+                {getVisibleSlides()
+                  .slice(0, 2)
+                  .map((item, index) => (
+                    <div
+                      key={`${item.id}-${currentSlide}-${index}`}
+                      className="group cursor-pointer"
+                    >
+                      <div className="relative aspect-[3/4] bg-stone-50 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mb-4">
+                        <Image
+                          src={item.image}
+                          alt={item.alt}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
 
-                    <div className="text-left">
-                      <h4 className="font-eb-garamond text-xl font-normal text-black leading-[150%] tracking-[-0.22px] mb-1">
-                        {item.title}
-                      </h4>
-                      <p className="font-helvetica text-base font-medium text-black leading-[150%] tracking-[-0.176px]">
-                        {item.price}
-                      </p>
+                      <div className="text-left">
+                        <h4 className="font-eb-garamond text-xl font-normal text-black leading-[150%] tracking-[-0.22px] mb-1">
+                          {item.title}
+                        </h4>
+                        <p className="font-helvetica text-base font-medium text-black leading-[150%] tracking-[-0.176px]">
+                          {item.price}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
               </div>
 
               {/* Mobile: Show 1 item */}
               <div className="md:hidden">
-                {sliderItems.slice(0, 1).map((item, index) => (
-                  <div
-                    key={item.id}
-                    className="group cursor-pointer"
-                  >
-                    <div className="relative aspect-[3/4] bg-stone-50 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mb-4 mx-auto max-w-xs">
-                      <Image
-                        src={item.image}
-                        alt={item.alt}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
+                {getVisibleSlides()
+                  .slice(0, 1)
+                  .map((item, index) => (
+                    <div
+                      key={`${item.id}-${currentSlide}-${index}`}
+                      className="group cursor-pointer"
+                    >
+                      <div className="relative aspect-[3/4] bg-stone-50 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mb-4 mx-auto max-w-xs">
+                        <Image
+                          src={item.image}
+                          alt={item.alt}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
 
-                    <div className="text-center">
-                      <h4 className="font-eb-garamond text-xl font-normal text-black leading-[150%] tracking-[-0.22px] mb-1">
-                        {item.title}
-                      </h4>
-                      <p className="font-helvetica text-base font-medium text-black leading-[150%] tracking-[-0.176px]">
-                        {item.price}
-                      </p>
+                      <div className="text-center">
+                        <h4 className="font-eb-garamond text-xl font-normal text-black leading-[150%] tracking-[-0.22px] mb-1">
+                          {item.title}
+                        </h4>
+                        <p className="font-helvetica text-base font-medium text-black leading-[150%] tracking-[-0.176px]">
+                          {item.price}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
               </div>
             </div>
           </div>
 
           {/* Right Section - Content */}
-          <div className="max-w-md">
+          <div className="lg:col-span-4 lg:pl-4">
             {/* Subtitle */}
             <div className="mb-4">
-              <span className="font-hiragino text-lg font-semibold text-black tracking-[1.26px] uppercase">
+              <span className="font-hiragino text-sm font-semibold text-black tracking-[1.26px] uppercase">
                 CURATED COLLECTION
               </span>
             </div>
 
             {/* Title */}
-            <h2 className="font-eb-garamond text-4xl font-normal text-black leading-[150%] tracking-[-0.44px] mb-6">
+            <h2 className="font-eb-garamond text-3xl lg:text-4xl font-normal text-black leading-[150%] tracking-[-0.44px] mb-6">
               Engagement Rings
             </h2>
 
             {/* Description */}
-            <p className="font-helvetica text-lg font-medium text-black leading-[150%] tracking-[-0.198px] mb-8">
+            <p className="font-helvetica text-base lg:text-lg font-medium text-black leading-[150%] tracking-[-0.198px] mb-8">
               Let us choose you the perfect diamond. All you have to do is select
               from Ring Designs that have been chosen over and over again as
               perfect heirlooms. These engagement rings are crafted by hand using
@@ -193,7 +208,7 @@ export default function CuratedCollectionSection() {
             </p>
 
             {/* Button */}
-            <button className="w-full btn-primary py-4 rounded text-lg font-semibold">
+            <button className="w-full bg-black text-white py-3 px-6 text-sm font-semibold uppercase tracking-wide hover:bg-gray-800 transition-colors duration-200">
               SHOP DIAMOND ENGAGEMENT RINGS
             </button>
           </div>
