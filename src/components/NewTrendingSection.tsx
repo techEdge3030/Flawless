@@ -58,10 +58,10 @@ export default function NewTrendingSection() {
 
   return (
     <section className="py-16 px-4 lg:px-8" style={{ backgroundColor: '#ede7e4' }}>
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-7 gap-6 lg:gap-4 items-stretch">
+      <div className="w-full max-w-none mx-auto px-4 lg:px-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
           {/* Left Section - Content */}
-          <div className="lg:col-span-2 lg:pr-4 flex flex-col justify-center">
+          <div className="lg:col-span-3 lg:pr-8 flex flex-col justify-center">
             {/* Subtitle */}
             <div className="mb-3">
               <span className="text-lg font-semibold text-black tracking-[1.26px] uppercase">
@@ -69,16 +69,18 @@ export default function NewTrendingSection() {
               </span>
             </div>
 
-            {/* Title */}
-            <h2 className="font-eb-garamond text-2xl lg:text-3xl font-medium italic text-black leading-[150%] tracking-[-0.418px] mb-4">
+            {/* Title - Keep on one line */}
+            <h2 className="font-eb-garamond text-3xl lg:text-4xl font-medium italic text-black leading-tight tracking-[-0.418px] mb-4 whitespace-nowrap">
               What&apos;s New & Trending?
             </h2>
 
-            {/* Description */}
-            <div className="text-sm lg:text-base font-medium text-black leading-[150%] tracking-[-0.198px] mb-6">
+            {/* Description with proper text chunking */}
+            <div className="text-base font-medium text-black leading-[150%] tracking-[-0.198px] mb-6">
               <p>
-                A space to find the latest designs, encounter the most loved diamond
-                rings and browse enchanting coloured gemstone collections.
+                A space to find the latest designs,<br />
+                encounter the most loved diamond<br />
+                rings and browse enchanting<br />
+                coloured gemstone collections.
               </p>
             </div>
 
