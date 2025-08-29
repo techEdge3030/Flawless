@@ -61,8 +61,8 @@ export default function ColoredDiamondsSection() {
               truly remarkable pieces worthy of your love story.
             </p>
 
-            <div className="w-full h-[70px] bg-light rounded-lg flex items-center justify-center">
-              <button className="font-hiragino text-lg font-semibold text-black tracking-[-0.198px]">
+            <div className="flex items-center">
+              <button className="px-6 h-[70px] rounded-lg bg-[#F1F1F1] font-hiragino text-lg font-semibold text-black tracking-[-0.198px]">
                 SHOP GEMSTONE ENGAGEMENT RINGS
               </button>
             </div>
