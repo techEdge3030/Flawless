@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function Header() {
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
