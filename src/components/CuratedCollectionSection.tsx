@@ -230,7 +230,7 @@ export default function CuratedCollectionSection() {
             </div>
 
             {/* Button */}
-            <button className="w-full border-2 border-black bg-transparent text-black py-2 px-3 text-xs lg:text-sm font-semibold uppercase tracking-wide hover:bg-black hover:text-white transition-all duration-200">
+            <button className="w-full border border-black bg-transparent text-black py-2 px-3 text-xs lg:text-sm font-semibold uppercase tracking-wide rounded hover:bg-black hover:text-white transition-all duration-200">
               SHOP DIAMOND ENGAGEMENT RINGS
             </button>
           </div>
