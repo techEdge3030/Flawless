@@ -56,12 +56,12 @@ export default function BespokeSection() {
           </div>
 
           {/* Right Column - Dropdown Menu */}
-          <div className="flex flex-col h-[360px] overflow-hidden">
+          <div className="flex flex-col transition-all duration-500 ease-in-out">
             {bespokeFeatures.map((feature, index) => (
-              <div key={index} className="relative border-b border-[#806C63] last:border-b-0 h-[60px]">
+              <div key={index} className="border-b border-[#806C63] last:border-b-0">
                 <button
                   onClick={() => toggleItem(index)}
-                  className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-black/5 transition-colors duration-200 h-full"
+                  className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-black/5 transition-colors duration-200"
                 >
                   <span
                     className="text-base font-normal text-[#806C63] leading-[150%] tracking-[-0.22px] flex-1"
@@ -70,7 +70,7 @@ export default function BespokeSection() {
                     {feature.title}
                   </span>
                   <svg
-                    className={`w-[16px] h-[8px] text-[#806C63] transition-transform duration-300 ml-4 flex-shrink-0 ${
+                    className={`w-[16px] h-[8px] text-[#806C63] transition-transform duration-500 ml-4 flex-shrink-0 ${
                       openItem === index ? 'rotate-180' : ''
                     }`}
                     width="27"
@@ -87,15 +87,21 @@ export default function BespokeSection() {
                   </svg>
                 </button>
 
-                {openItem === index && (
-                  <div className="absolute top-full left-0 right-0 bg-[#ede7e4] border-b border-[#806C63] z-10 animate-slideDown">
-                    <div className="px-6 py-4">
+                <div
+                  className={`grid transition-all duration-500 ease-in-out ${
+                    openItem === index
+                      ? 'grid-rows-[1fr] opacity-100'
+                      : 'grid-rows-[0fr] opacity-0'
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="px-6 pb-4">
                       <p className="text-sm text-gray-700 leading-relaxed">
                         {feature.content}
                       </p>
                     </div>
                   </div>
-                )}
+                </div>
               </div>
             ))}
           </div>
