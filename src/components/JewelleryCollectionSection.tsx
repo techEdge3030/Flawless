@@ -99,48 +99,128 @@ export default function JewelleryCollectionSection() {
           </p>
         </div>
 
-        {/* Collections grid */}
-        <div className="grid grid-cols-4 gap-6 mb-12">
-          {collections.map((collection, index) => (
-            <div key={collection.name} className="group cursor-pointer">
-              <div className="w-full h-[576px] relative overflow-hidden rounded-lg bg-[#D9D9D9] mb-4">
-                <Image
-                  src={collection.image}
-                  alt={collection.name}
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+        {/* Slider Container */}
+        <div className="relative mb-12">
+          {/* Left Arrow */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-3 hover:bg-stone-100 rounded-full transition-colors duration-200 group"
+            aria-label="Previous collections"
+          >
+            <svg
+              className="w-6 h-6 text-stone-500 group-hover:text-stone-700 transition-colors"
+              viewBox="0 0 26 46"
+              fill="none"
+            >
+              <path
+                d="M24.2639 3.66309L5.23267 23.1631L24.2502 42.6914L24.5872 43.0371L24.2542 43.3857L23.0002 44.6982L22.6418 45.0732L22.2805 44.7021L1.64185 23.5107L1.302 23.1611L1.64185 22.8125L22.2961 1.65039L22.6584 1.2793L23.0159 1.65527L24.2688 2.96973L24.6008 3.31836L24.2639 3.66309Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
 
-                {/* Overlay images for visual depth */}
-                {collection.overlayImages.map((overlayImg, imgIndex) => (
-                  <div
-                    key={imgIndex}
-                    className="absolute"
-                    style={{
-                      transform: `translate(${imgIndex * -15}px, ${imgIndex * -25}px) ${imgIndex === 2 ? "rotate(-170.078deg)" : ""}`,
-                      zIndex: imgIndex + 1,
-                      left: imgIndex * -10,
-                      top: imgIndex * -20,
-                    }}
-                  >
+          {/* Right Arrow */}
+          <button
+            onClick={nextSlide}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-3 hover:bg-stone-100 rounded-full transition-colors duration-200 group"
+            aria-label="Next collections"
+          >
+            <svg
+              className="w-6 h-6 text-stone-500 group-hover:text-stone-700 transition-colors"
+              viewBox="0 0 26 47"
+              fill="none"
+            >
+              <path
+                d="M1.45984 43.7205L20.5048 23.7195L1.47351 3.69019L1.15027 3.34937L1.47058 3.00464L2.72449 1.65894L3.08679 1.27026L3.453 1.65601L24.0907 23.3767L24.4188 23.7214L24.0907 24.0662L3.4364 45.7566L3.07019 46.1414L2.70886 45.7527L1.45593 44.405L1.13562 44.0603L1.45984 43.7205Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+
+          {/* Collections Display */}
+          <div className="mx-16">
+            {/* Desktop: Show 4 collections */}
+            <div className="hidden lg:grid lg:grid-cols-4 gap-6">
+              {getVisibleSlides().map((collection, index) => (
+                <div
+                  key={`${collection.name}-${currentSlide}-${index}`}
+                  className="group cursor-pointer"
+                  onClick={() =>
+                    goToSlide((currentSlide + index) % collections.length)
+                  }
+                >
+                  <div className="w-full h-[576px] relative overflow-hidden rounded-lg bg-[#D9D9D9] mb-4 hover:shadow-xl transition-shadow duration-300">
                     <Image
-                      src={overlayImg}
-                      alt={`${collection.name} detail ${imgIndex + 1}`}
-                      width={imgIndex === 0 ? 420 : imgIndex === 1 ? 907 : 409}
-                      height={
-                        imgIndex === 0 ? 551 : imgIndex === 1 ? 1360 : 576
-                      }
-                      className="object-cover"
+                      src={collection.image}
+                      alt={collection.alt}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
-                ))}
-              </div>
 
-              <h3 className="font-hiragino text-[22px] font-semibold text-black text-center leading-[150%] tracking-[0.22px]">
-                {collection.name}
-              </h3>
+                  <h3 className="font-hiragino text-[22px] font-semibold text-black text-center leading-[150%] tracking-[0.22px]">
+                    {collection.name}
+                  </h3>
+                </div>
+              ))}
             </div>
-          ))}
+
+            {/* Tablet: Show 2 collections */}
+            <div className="hidden md:grid lg:hidden md:grid-cols-2 gap-6">
+              {getVisibleSlides()
+                .slice(0, 2)
+                .map((collection, index) => (
+                  <div
+                    key={`${collection.name}-${currentSlide}-${index}`}
+                    className="group cursor-pointer"
+                    onClick={() =>
+                      goToSlide((currentSlide + index) % collections.length)
+                    }
+                  >
+                    <div className="w-full h-[576px] relative overflow-hidden rounded-lg bg-[#D9D9D9] mb-4 hover:shadow-xl transition-shadow duration-300">
+                      <Image
+                        src={collection.image}
+                        alt={collection.alt}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
+
+                    <h3 className="font-hiragino text-[22px] font-semibold text-black text-center leading-[150%] tracking-[0.22px]">
+                      {collection.name}
+                    </h3>
+                  </div>
+                ))}
+            </div>
+
+            {/* Mobile: Show 1 collection */}
+            <div className="md:hidden">
+              {getVisibleSlides()
+                .slice(0, 1)
+                .map((collection, index) => (
+                  <div
+                    key={`${collection.name}-${currentSlide}-${index}`}
+                    className="group cursor-pointer"
+                    onClick={() =>
+                      goToSlide((currentSlide + index) % collections.length)
+                    }
+                  >
+                    <div className="w-full h-[576px] relative overflow-hidden rounded-lg bg-[#D9D9D9] mb-4 hover:shadow-xl transition-shadow duration-300">
+                      <Image
+                        src={collection.image}
+                        alt={collection.alt}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
+
+                    <h3 className="font-hiragino text-[22px] font-semibold text-black text-center leading-[150%] tracking-[0.22px]">
+                      {collection.name}
+                    </h3>
+                  </div>
+                ))}
+            </div>
+          </div>
         </div>
 
         {/* Curated Collection Call-to-Action */}
