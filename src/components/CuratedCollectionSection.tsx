@@ -71,9 +71,9 @@ export default function CuratedCollectionSection() {
   return (
     <section className="py-16 px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-6 items-start">
           {/* Left Section - Image Slider */}
-          <div className="lg:col-span-8 relative">
+          <div className="lg:col-span-4 relative">
             {/* Only Left Arrow */}
             <button
               onClick={prevSlide}
