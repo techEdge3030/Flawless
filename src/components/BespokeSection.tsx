@@ -41,12 +41,12 @@ export default function BespokeSection() {
       <div className="max-w-7xl mx-auto px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Left Column - Content */}
-          <div>
-            <h2 className="font-eb-garamond text-4xl italic font-medium text-black mb-8 tracking-[-0.44px]">
+          <div className="text-center">
+            <h2 className="font-eb-garamond text-[32px] italic font-medium text-[#806C63] mb-8 leading-[150%] tracking-[-0.352px]">
               What is Bespoke Diamond Jewellery
             </h2>
 
-            <p className="font-helvetica text-lg font-normal text-black leading-[150%] mb-8">
+            <p className="text-[20px] font-medium text-[#806C63] leading-[168%] tracking-[-0.22px] mb-8" style={{ fontFamily: 'Helvetica Now Text, -apple-system, Roboto, Helvetica, sans-serif' }}>
               The term &apos;bespoke&apos; refers to jewellery designed and
               crafted from scratch. From necklaces to bracelets, engagement rings
               to anniversary gifts, milestone birthdays and more, we offer an
@@ -56,7 +56,7 @@ export default function BespokeSection() {
               visions to life.
             </p>
 
-            <button className="bg-[#806C63] text-white px-8 py-3 text-sm font-medium uppercase tracking-wide hover:bg-[#6d5a52] transition-colors duration-200">
+            <button className="border border-[#806C63] text-[#806C63] px-8 py-3 text-sm font-medium uppercase tracking-wide hover:bg-[#806C63] hover:text-white transition-all duration-200">
               BOOK A FREE CONSULTATION
             </button>
           </div>
