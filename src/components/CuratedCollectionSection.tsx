@@ -187,14 +187,14 @@ export default function CuratedCollectionSection() {
           {/* Right Section - Content */}
           <div className="lg:col-span-2 lg:pl-6 flex flex-col justify-center">
             {/* Subtitle */}
-            <div className="mb-4">
-              <span className="font-hiragino text-sm font-semibold text-black tracking-[1.26px] uppercase">
+            <div className="mb-3">
+              <span className="font-hiragino text-xs lg:text-sm font-semibold text-black tracking-[1.26px] uppercase">
                 CURATED COLLECTION
               </span>
             </div>
 
             {/* Title */}
-            <h2 className="font-eb-garamond text-3xl lg:text-4xl font-normal italic text-black leading-[150%] tracking-[-0.44px] mb-6">
+            <h2 className="font-eb-garamond text-2xl lg:text-3xl font-normal italic text-black leading-[150%] tracking-[-0.44px] mb-4">
               Engagement Rings
             </h2>
 
