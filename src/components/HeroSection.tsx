@@ -111,16 +111,20 @@ export default function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center z-30 relative">
             <Link
               href="/engagement"
-              className="flex items-center justify-center w-[350px] h-[44px] text-[16px] font-semibold uppercase leading-[150%] tracking-[0.16px] hover:bg-white hover:text-black transition-all duration-300 text-center font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif] text-black rounded-md"
+              className="flex items-center justify-center w-[350px] h-[44px] text-[16px] font-semibold uppercase leading-[150%] tracking-[0.16px] hover:text-white transition-all duration-300 text-center font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif] text-black rounded-md"
               style={{ backgroundColor: '#e0dddaCC' }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#000000CC'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#e0dddaCC'}
             >
               Shop Engagement Rings
             </Link>
 
             <Link
               href="/book-appointment"
-              className="flex items-center justify-center w-[350px] h-[45px] text-[16px] font-semibold uppercase leading-[150%] tracking-[0.16px] hover:bg-transparent hover:border-2 hover:border-white hover:text-white transition-all duration-300 text-center font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif] text-black rounded-md"
+              className="flex items-center justify-center w-[350px] h-[45px] text-[16px] font-semibold uppercase leading-[150%] tracking-[0.16px] hover:text-white transition-all duration-300 text-center font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif] text-black rounded-md"
               style={{ backgroundColor: '#e0dddaCC' }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#000000CC'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#e0dddaCC'}
             >
               Book Your Appointment
             </Link>
