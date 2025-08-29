@@ -5,6 +5,7 @@ import WhatsMoreImportantSection from "@/components/WhatsMoreImportantSection";
 import ShopByStyleSection from "@/components/ShopByStyleSection";
 import DiamondShapesSection from "@/components/DiamondShapesSection";
 import JewelleryCollectionSection from "@/components/JewelleryCollectionSection";
+import CuratedCollectionSection from "@/components/CuratedCollectionSection";
 import DesignBespokeSection from "@/components/DesignBespokeSection";
 import NewTrendingSection from "@/components/NewTrendingSection";
 import ColoredDiamondsSection from "@/components/ColoredDiamondsSection";
