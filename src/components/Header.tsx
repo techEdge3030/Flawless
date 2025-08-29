@@ -204,7 +204,7 @@ export default function Header() {
                   {languages.map((language) => (
                     <button
                       key={language.code}
-                      className="w-full flex items-center space-x-3 px-4 py-3 text-left hover:bg-blue-50 hover:border-l-4 hover:border-blue-400 hover:shadow-lg active:bg-blue-100 transition-all duration-200 ease-in-out first:rounded-t-lg last:rounded-b-lg cursor-pointer relative group transform hover:scale-[1.02]"
+                      className="w-full flex items-center space-x-3 px-4 py-3 text-left hover:bg-gray-100 transition-colors duration-150 ease-in-out first:rounded-t-lg last:rounded-b-lg cursor-pointer"
                       onClick={() => {
                         setSelectedLanguage(language);
                         setIsLanguageDropdownOpen(false);
