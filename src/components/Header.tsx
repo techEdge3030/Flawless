@@ -9,6 +9,7 @@ export default function Header() {
     flag: "🇬🇧",
     name: "United Kingdom"
   });
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const languages = [
     { code: "GBP", flag: "🇬🇧", name: "United Kingdom" },
@@ -16,6 +17,20 @@ export default function Header() {
     { code: "JPY", flag: "🇯🇵", name: "Japan" },
     { code: "CNY", flag: "🇨🇳", name: "China" },
   ];
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsLanguageDropdownOpen(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
   return (
     <header className="relative w-full h-[124px] shadow-lg">
       {/* Background Image */}
