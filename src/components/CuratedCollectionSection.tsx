@@ -199,7 +199,7 @@ export default function CuratedCollectionSection() {
             </h2>
 
             {/* Description */}
-            <div className="font-helvetica text-base lg:text-lg font-medium text-black leading-[150%] tracking-[-0.198px] mb-8">
+            <div className="font-helvetica text-sm lg:text-base font-medium text-black leading-[150%] tracking-[-0.198px] mb-6">
               <p className="mb-0">
                 Let us choose you the perfect diamond.
               </p>
