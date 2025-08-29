@@ -68,7 +68,7 @@ export default function GuidesSection() {
           {/* Left Arrow */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-3 hover:bg-stone-100 rounded-full transition-colors duration-200 group"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-3 hover:opacity-80 transition-opacity duration-200 group"
             aria-label="Previous guides"
           >
             <svg
@@ -77,7 +77,7 @@ export default function GuidesSection() {
               viewBox="0 0 23 35"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="w-[30px] h-[17px] rotate-90 group-hover:opacity-80 transition-opacity"
+              className="w-[30px] h-[17px] rotate-90"
             >
               <path
                 d="M3.00009 17.2884L19.1045 2.54736L20.0811 3.46285L4.97569 17.2895L20.0699 31.1359L19.0923 32.0504L3.00009 17.2884Z"
@@ -91,7 +91,7 @@ export default function GuidesSection() {
           {/* Right Arrow */}
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-3 hover:bg-stone-100 rounded-full transition-colors duration-200 group"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-3 hover:opacity-80 transition-opacity duration-200 group"
             aria-label="Next guides"
           >
             <svg
@@ -100,7 +100,7 @@ export default function GuidesSection() {
               viewBox="0 0 23 36"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="w-[30px] h-[17px] -rotate-90 group-hover:opacity-80 transition-opacity"
+              className="w-[30px] h-[17px] -rotate-90"
             >
               <path
                 d="M19.9999 18.054L3.89549 33.1636L2.91895 32.2252L18.0243 18.0529L2.93006 3.86033L3.90772 2.92301L19.9999 18.054Z"
