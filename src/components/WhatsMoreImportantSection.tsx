@@ -16,27 +16,31 @@ export default function WhatsMoreImportantSection() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
           {/* Option 1: Customising Your Own Ring */}
           <div className="relative">
+            {/* Title at top */}
+            <h3 className="font-serif text-2xl lg:text-3xl text-stone-700 italic font-medium mb-6 leading-tight text-center">
+              Customising Your Own Ring
+            </h3>
+
             {/* Image Container */}
             <div className="relative h-80 lg:h-96 overflow-hidden mb-6">
               <Image
-                src="https://cdn.builder.io/api/v1/image/assets%2Fdb7cf6075ca848d3bdb7e775ee5e9d74%2F6791f929b4f543b2b6cf15eb372cd47b?format=webp&width=800"
+                src="https://api.builder.io/api/v1/image/assets/TEMP/c9bdf79053068b38353e3c89632fed61bae9f5ae?width=1124"
                 alt="Ring being designed with tweezers holding diamond"
                 fill
                 className="object-cover object-center"
                 style={{ transform: 'rotate(10.994deg)' }}
               />
               {/* Most Popular Badge */}
-              <div className="absolute top-4 left-4 bg-stone-600 text-white px-4 py-2 text-sm font-medium rounded">
+              <div 
+                className="absolute top-4 left-4 text-white px-4 py-2 text-sm font-medium rounded"
+                style={{ backgroundColor: 'rgba(153, 129, 118, 0.9)' }}
+              >
                 Most Popular
               </div>
             </div>
 
             {/* Content */}
             <div className="text-center">
-              <h3 className="font-serif text-2xl lg:text-3xl text-stone-700 italic font-medium mb-4 leading-tight">
-                Customising Your Own Ring
-              </h3>
-
               <h4 className="text-stone-600 font-semibold text-lg mb-6 tracking-wide">
                 Start Designing Your Ring
               </h4>
@@ -66,6 +70,11 @@ export default function WhatsMoreImportantSection() {
 
           {/* Option 2: Receiving Your Ring Quickly */}
           <div className="relative">
+            {/* Title at top */}
+            <h3 className="font-serif text-2xl lg:text-3xl text-stone-700 italic font-medium mb-6 leading-tight text-center">
+              Receiving Your Ring Quickly
+            </h3>
+
             {/* Image Container */}
             <div className="relative h-80 lg:h-96 overflow-hidden mb-6">
               <Image
@@ -75,17 +84,16 @@ export default function WhatsMoreImportantSection() {
                 className="object-cover object-center"
               />
               {/* Fastest Badge */}
-              <div className="absolute top-4 left-4 bg-stone-600 text-white px-4 py-2 text-sm font-medium rounded">
+              <div 
+                className="absolute top-4 left-4 text-white px-4 py-2 text-sm font-medium rounded"
+                style={{ backgroundColor: 'rgba(153, 129, 118, 0.9)' }}
+              >
                 Fastest
               </div>
             </div>
 
             {/* Content */}
             <div className="text-center">
-              <h3 className="font-serif text-2xl lg:text-3xl text-stone-700 italic font-medium mb-4 leading-tight">
-                Receiving Your Ring Quickly
-              </h3>
-
               <h4 className="text-stone-600 font-semibold text-lg mb-6 tracking-wide">
                 Shop Ready to Ship Rings
               </h4>
@@ -114,6 +122,11 @@ export default function WhatsMoreImportantSection() {
 
           {/* Option 3: Choosing a Curated Ring */}
           <div className="relative">
+            {/* Title at top */}
+            <h3 className="font-serif text-2xl lg:text-3xl text-stone-700 italic font-medium mb-6 leading-tight text-center">
+              Choosing a Curated Ring
+            </h3>
+
             {/* Image Container */}
             <div className="relative h-80 lg:h-96 overflow-hidden mb-6">
               <Image
@@ -123,17 +136,16 @@ export default function WhatsMoreImportantSection() {
                 className="object-cover object-center"
               />
               {/* We Select Your Diamond Badge */}
-              <div className="absolute top-4 left-4 bg-stone-600 text-white px-4 py-2 text-sm font-medium rounded">
+              <div 
+                className="absolute top-4 left-4 text-white px-4 py-2 text-sm font-medium rounded"
+                style={{ backgroundColor: 'rgba(153, 129, 118, 0.9)' }}
+              >
                 We Select Your Diamond
               </div>
             </div>
 
             {/* Content */}
             <div className="text-center">
-              <h3 className="font-serif text-2xl lg:text-3xl text-stone-700 italic font-medium mb-4 leading-tight">
-                Choosing a Curated Ring
-              </h3>
-
               <h4 className="text-stone-600 font-semibold text-lg mb-6 tracking-wide">
                 Shop Curated Collection
               </h4>
