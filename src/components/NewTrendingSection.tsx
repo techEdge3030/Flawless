@@ -16,26 +16,50 @@ export default function NewTrendingSection() {
     {
       id: "toi-et-moi",
       name: "Toi et Moi",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/41708f5e26e2fbe444cf8cb1a85d0d43afb1f297?width=1293",
+      image: "https://api.builder.io/api/v1/image/assets/TEMP/c6c37426fa30c6c94ffda084ac5a15778c6e7949?width=487",
       alt: "Toi et Moi engagement ring",
     },
     {
       id: "marquise-diamonds",
       name: "Marquise Diamonds",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/ad33659c33381eac40061641b81f19d65a13ad9f?width=624",
+      image: "https://api.builder.io/api/v1/image/assets/TEMP/64a6cecd3bee5a4cfa2db7d4d463c0228282120e?width=675",
       alt: "Marquise diamond engagement ring",
     },
     {
       id: "pink-diamond-morning-star",
       name: "Pink Diamond Morning Star",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/eb6c104d8ba08b83785da235ba0c7f87d5a55062?width=674",
+      image: "https://api.builder.io/api/v1/image/assets/TEMP/32ad8163ab4c9d0bf67239019cb4d54d25f064d0?width=776",
       alt: "Pink diamond morning star engagement ring",
     },
     {
       id: "elongated-cushion-cuts",
       name: "Elongated Cushion Cuts",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/d8b23fc844969be7d2cfeb54e478749004767002?width=634",
+      image: "https://api.builder.io/api/v1/image/assets/TEMP/e132f9907df076aa5638840cbce5d11a5f3bd404?width=486",
       alt: "Elongated cushion cut engagement ring",
+    },
+    {
+      id: "sapphire-rings",
+      name: "Sapphire Rings",
+      image: "https://api.builder.io/api/v1/image/assets/TEMP/ecfe81db2c4dca965547eee14b2df2b328df4160?width=474",
+      alt: "Sapphire engagement ring",
+    },
+    {
+      id: "cluster-engagement-rings",
+      name: "Cluster Engagement Rings",
+      image: "https://api.builder.io/api/v1/image/assets/TEMP/c85ab79e234e5e659ecdaf8a724ff513117bdd3f?width=726",
+      alt: "Cluster engagement ring",
+    },
+    {
+      id: "avian",
+      name: "Avian",
+      image: "https://api.builder.io/api/v1/image/assets/TEMP/289c955c8f89a9418cde1c8efca15aec0a353911?width=728",
+      alt: "Avian style engagement ring",
+    },
+    {
+      id: "yellow-diamonds",
+      name: "Yellow Diamonds",
+      image: "https://api.builder.io/api/v1/image/assets/TEMP/1debffd04ad39a3768b1d23c0d150a69afbfb064?width=723",
+      alt: "Yellow diamond engagement ring",
     },
   ];
 
