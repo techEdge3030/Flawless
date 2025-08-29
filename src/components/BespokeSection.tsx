@@ -61,39 +61,46 @@ export default function BespokeSection() {
           </div>
 
           {/* Right Column - Dropdown Menu */}
-          <div className="space-y-0">
+          <div className="space-y-0 flex flex-col justify-start h-full">
             {bespokeFeatures.map((feature, index) => (
-              <div key={index} className="border-b border-[#7f6c62] last:border-b-0">
+              <div key={index} className="relative">
                 <button
                   onClick={() => toggleItem(index)}
-                  className="w-full py-4 flex items-center justify-between text-left hover:bg-black/5 transition-colors duration-200 pr-4"
+                  className="w-full py-6 flex items-center justify-between text-left hover:bg-black/5 transition-colors duration-200"
                 >
-                  <span className="font-helvetica text-sm font-medium text-[#7f6c62] uppercase tracking-wide flex-1">
+                  <span
+                    className="text-[20px] font-normal text-[#806C63] leading-[150%] tracking-[-0.22px] flex-1"
+                    style={{ fontFamily: 'Helvetica Now Text, -apple-system, Roboto, Helvetica, sans-serif' }}
+                  >
                     {feature.title}
                   </span>
                   <svg
-                    className={`w-4 h-4 text-[#7f6c62] transition-transform duration-300 ml-4 mr-2 flex-shrink-0 ${
+                    className={`w-[23px] h-[11px] text-[#806C63] transition-transform duration-300 ml-4 flex-shrink-0 ${
                       openItem === index ? 'rotate-180' : ''
                     }`}
+                    width="27"
+                    height="15"
+                    viewBox="0 0 27 15"
                     fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
+                      d="M3.04883 1.62891L13.4932 11.0537L23.9521 1.63574L24.2842 1.33691L24.6182 1.63281L25.3311 2.26172L25.751 2.63281L25.335 3.00879L13.8262 13.3711L13.4912 13.6729L13.1572 13.3711L1.66504 3L1.24902 2.62402L1.66992 2.25391L2.38281 1.625L2.71777 1.33008L3.04883 1.62891Z"
+                      fill="#806C63"
+                      stroke="#806C63"
                     />
                   </svg>
                 </button>
 
+                {/* Horizontal separator line */}
+                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#806C63]"></div>
+
                 <div
                   className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    openItem === index ? 'max-h-32 pb-4' : 'max-h-0'
+                    openItem === index ? 'max-h-32 pb-6' : 'max-h-0'
                   }`}
                 >
-                  <p className="text-sm text-gray-700 leading-relaxed px-0">
+                  <p className="text-sm text-gray-700 leading-relaxed">
                     {feature.content}
                   </p>
                 </div>
