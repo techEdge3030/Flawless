@@ -14,60 +14,60 @@ export default function ShopByStyleSection() {
 
   const ringStyles: RingStyle[] = [
     {
-      id: "oval-three-stone",
-      title: "Oval Three Stone",
+      id: "trilogy",
+      title: "Trilogy",
       image:
-        "https://cdn.builder.io/api/v1/image/assets%2F82ac9eba2533469a871410336fa61e14%2F8e37fc8d00724697b9741ed9601cfad3?format=webp&width=800",
-      alt: "Oval three stone engagement ring with pear side stones",
+        "https://api.builder.io/api/v1/image/assets/TEMP/16dd20e0179bb63e2af497b425538239c373393c?width=922",
+      alt: "Trilogy engagement ring with three stones",
     },
     {
-      id: "oval-cluster",
-      title: "Oval Cluster",
+      id: "solitaire",
+      title: "Solitaire",
       image:
-        "https://cdn.builder.io/api/v1/image/assets%2F82ac9eba2533469a871410336fa61e14%2F825abc1c653744efb183237dc044e66c?format=webp&width=800",
-      alt: "Oval center stone with diamond cluster band",
+        "https://api.builder.io/api/v1/image/assets/TEMP/2890df9d1e9b338c5e7032db8bc6d5446ac707af?width=759",
+      alt: "Classic solitaire engagement ring",
     },
     {
-      id: "pear-halo",
-      title: "Pear Halo",
+      id: "cluster",
+      title: "Cluster",
       image:
-        "https://cdn.builder.io/api/v1/image/assets%2F82ac9eba2533469a871410336fa61e14%2F494f788903b8478abf0bf1d5404c70c0?format=webp&width=800",
-      alt: "Pear shaped diamond with halo setting",
+        "https://api.builder.io/api/v1/image/assets/TEMP/31a695519a172dec718fbc9e6600927e17006ce5?width=899",
+      alt: "Cluster engagement ring with multiple stones",
     },
     {
-      id: "round-solitaire",
-      title: "Round Solitaire",
+      id: "bezel",
+      title: "Bezel",
       image:
-        "https://cdn.builder.io/api/v1/image/assets%2F82ac9eba2533469a871410336fa61e14%2Ff2e46a5e919542e1882db3b2c3bf51a2?format=webp&width=800",
-      alt: "Classic round solitaire engagement ring",
+        "https://api.builder.io/api/v1/image/assets/TEMP/cb86112fdd740f3bb78bd803a7aa135751de9937?width=728",
+      alt: "Bezel set engagement ring",
     },
     {
-      id: "emerald-bezel",
-      title: "Emerald Bezel",
+      id: "hidden-halo",
+      title: "Hidden Halo",
       image:
-        "https://cdn.builder.io/api/v1/image/assets%2F82ac9eba2533469a871410336fa61e14%2F941f08162843438ba5d80c1639a9b56a?format=webp&width=800",
-      alt: "Emerald cut diamond in bezel setting",
+        "https://api.builder.io/api/v1/image/assets/TEMP/0be5fd26f5e95bc4cf6f383f4972f17372cc3f98?width=736",
+      alt: "Hidden halo engagement ring",
     },
     {
-      id: "vintage-oval",
-      title: "Vintage Oval",
+      id: "floral",
+      title: "Floral",
       image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/f258bf9cca6ca64de0cd4a589bbe5ba42b9353b2?width=1265",
-      alt: "Vintage inspired oval engagement ring",
+        "https://api.builder.io/api/v1/image/assets/TEMP/08779eb2d8fe0a83c0c4d82bfeab5f2b606b498d?width=620",
+      alt: "Floral design engagement ring",
     },
     {
-      id: "classic-round",
-      title: "Classic Round",
+      id: "celtic",
+      title: "Celtic",
       image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/6d9e98c2214e077b8ce57ab5061d3aa94c389c44?width=1023",
-      alt: "Classic round diamond engagement ring",
+        "https://api.builder.io/api/v1/image/assets/TEMP/ee47f00d037ad8985031404c1c2f619f5f215aa7?width=738",
+      alt: "Celtic design engagement ring",
     },
     {
-      id: "modern-cushion",
-      title: "Modern Cushion",
+      id: "halo",
+      title: "Halo",
       image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/613c00fdec0bc81f309737405c1a06af29a3cd25?width=1034",
-      alt: "Modern cushion cut engagement ring",
+        "https://api.builder.io/api/v1/image/assets/TEMP/571d0eb51d4e94747f07216d12d04af94a156d6a?width=804",
+      alt: "Halo engagement ring",
     },
   ];
 
@@ -86,7 +86,7 @@ export default function ShopByStyleSection() {
   };
 
   const getVisibleSlides = () => {
-    const slidesToShow = 3; // Show 3 rings at a time on desktop
+    const slidesToShow = 5; // Show 5 rings at a time on desktop
     const slides = [];
 
     for (let i = 0; i < slidesToShow; i++) {
@@ -153,8 +153,8 @@ export default function ShopByStyleSection() {
 
           {/* Rings Display */}
           <div className="mx-16">
-            {/* Desktop: Show 3 rings */}
-            <div className="hidden lg:grid lg:grid-cols-3 gap-8">
+            {/* Desktop: Show 5 rings */}
+            <div className="hidden lg:grid lg:grid-cols-5 gap-6">
               {getVisibleSlides().map((ring, index) => (
                 <div
                   key={`${ring.id}-${currentSlide}-${index}`}
@@ -207,29 +207,6 @@ export default function ShopByStyleSection() {
               </div>
             </div>
           </div>
-
-          {/* Dots Indicator */}
-          <div className="flex justify-center mt-8 space-x-2">
-            {ringStyles.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                  index === currentSlide
-                    ? "bg-stone-600"
-                    : "bg-stone-300 hover:bg-stone-400"
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-12 lg:mt-16">
-          <button className="bg-stone-800 text-white px-8 py-4 text-base font-semibold uppercase tracking-wide hover:bg-stone-700 transition-colors duration-300">
-            View All Ring Styles
-          </button>
         </div>
       </div>
     </section>
