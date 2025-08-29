@@ -100,7 +100,7 @@ export default function JewelleryCollectionSection() {
         </div>
 
         {/* Slider Container */}
-        <div className="relative mb-12">
+        <div className="relative">
           {/* Left Arrow */}
           <button
             onClick={prevSlide}
