@@ -50,12 +50,19 @@ export default function JewelleryCollectionSection() {
           <h2 className="font-eb-garamond text-4xl italic font-medium text-black mb-6 tracking-[-0.44px]">
             Shop Jewellery
           </h2>
-          <p className="font-helvetica text-xl font-medium text-secondary leading-[150%] tracking-[-0.22px] max-w-5xl mx-auto">
-            Our collection of jewellery features stunning rings,{" "}
-            <span className="text-secondary">wedding bands</span>,{" "}
-            <span className="text-secondary">pendants</span>,{" "}
-            <span className="text-secondary">bracelets</span> and more, all
-            crafted with the finest diamonds and heritage techniques.
+          {/* Desktop view with specific line breaks */}
+          <div className="hidden lg:block font-helvetica text-xl font-medium text-secondary leading-[150%] tracking-[-0.22px] max-w-5xl mx-auto text-center">
+            <p className="mb-0">
+              Our curated collection of jewellery features stunning rings, wedding bands, pendants,
+            </p>
+            <p>
+              bracelets and more, all crafted with the finest diamonds and heritage techniques.
+            </p>
+          </div>
+
+          {/* Mobile/Tablet view - single line */}
+          <p className="lg:hidden font-helvetica text-xl font-medium text-secondary leading-[150%] tracking-[-0.22px] max-w-5xl mx-auto">
+            Our curated collection of jewellery features stunning rings, wedding bands, pendants, bracelets and more, all crafted with the finest diamonds and heritage techniques.
           </p>
         </div>
 
