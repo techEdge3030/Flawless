@@ -47,7 +47,12 @@ export default function BespokeSection() {
             </h2>
 
             <p className="text-[20px] font-normal text-[#806C63] leading-[168%] tracking-[-0.22px] mb-8 max-w-[647px] mx-auto" style={{ fontFamily: 'Helvetica Now Text, -apple-system, Roboto, Helvetica, sans-serif' }}>
-              The term &apos;bespoke&apos; refers to jewellery designed and crafted from scratch. From necklaces to bracelets, engagement rings to anniversary gifts, milestone birthdays and more, we offer an intimate and personalised service, available both virtually or in person. Our team of jewellers in Hatton Garden, London are experts at working with customers all over the world to bring their bespoke visions to life.
+              The term &apos;bespoke&apos; refers to jewellery designed and crafted from<br />
+              scratch. From necklaces to bracelets, engagement rings to<br />
+              anniversary gifts, milestone birthdays and more, we offer an intimate<br />
+              and personalised service, available both virtually or in person. Our<br />
+              team of jewellers in Hatton Garden, London are experts at working<br />
+              with customers all over the world to bring their bespoke visions to life.
             </p>
 
             <button className="bg-[#A39186] text-white px-8 py-3 text-sm font-medium uppercase tracking-wide hover:bg-[#8B7F73] transition-all duration-200 rounded">
