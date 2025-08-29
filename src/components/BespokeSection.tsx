@@ -56,12 +56,12 @@ export default function BespokeSection() {
           </div>
 
           {/* Right Column - Dropdown Menu */}
-          <div className="flex flex-col h-full">
+          <div className="flex flex-col h-[360px] overflow-hidden">
             {bespokeFeatures.map((feature, index) => (
-              <div key={index} className="border-b border-[#806C63] last:border-b-0">
+              <div key={index} className="relative border-b border-[#806C63] last:border-b-0 h-[60px]">
                 <button
                   onClick={() => toggleItem(index)}
-                  className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-black/5 transition-colors duration-200"
+                  className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-black/5 transition-colors duration-200 h-full"
                 >
                   <span
                     className="text-base font-normal text-[#806C63] leading-[150%] tracking-[-0.22px] flex-1"
@@ -87,17 +87,15 @@ export default function BespokeSection() {
                   </svg>
                 </button>
 
-                <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    openItem === index ? 'max-h-24 opacity-100' : 'max-h-0 opacity-0'
-                  }`}
-                >
-                  <div className="px-6 pb-4">
-                    <p className="text-sm text-gray-700 leading-relaxed">
-                      {feature.content}
-                    </p>
+                {openItem === index && (
+                  <div className="absolute top-full left-0 right-0 bg-[#ede7e4] border-b border-[#806C63] z-10 animate-slideDown">
+                    <div className="px-6 py-4">
+                      <p className="text-sm text-gray-700 leading-relaxed">
+                        {feature.content}
+                      </p>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             ))}
           </div>
