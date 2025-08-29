@@ -205,19 +205,6 @@ export default function GuidesSection() {
           </div>
         </div>
 
-        {/* Slide Indicators */}
-        <div className="flex justify-center mt-8 space-x-2">
-          {guides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-2 h-2 rounded-full transition-colors duration-200 ${
-                index === currentSlide ? "bg-stone-600" : "bg-stone-300"
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
       </div>
     </section>
   );
