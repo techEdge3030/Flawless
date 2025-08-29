@@ -73,7 +73,7 @@ export default function CuratedCollectionSection() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-6 items-stretch">
           {/* Left Section - Image Slider */}
-          <div className="lg:col-span-3 relative flex flex-col">
+          <div className="lg:col-span-4 relative flex flex-col">
             {/* Only Left Arrow */}
             <button
               onClick={prevSlide}
@@ -95,7 +95,7 @@ export default function CuratedCollectionSection() {
             {/* Slider Container */}
             <div className="overflow-hidden">
               {/* Desktop: Show 4 items */}
-              <div className="hidden lg:grid lg:grid-cols-3 gap-4">
+              <div className="hidden lg:grid lg:grid-cols-4 gap-4">
                 {getVisibleSlides().map((item, index) => (
                   <div
                     key={`${item.id}-${currentSlide}-${index}`}
@@ -185,7 +185,7 @@ export default function CuratedCollectionSection() {
           </div>
 
           {/* Right Section - Content */}
-          <div className="lg:col-span-2 lg:pl-8 flex flex-col justify-center">
+          <div className="lg:col-span-1 lg:pl-6 flex flex-col justify-center">
             {/* Subtitle */}
             <div className="mb-3">
               <span className="font-hiragino text-xs lg:text-sm font-semibold text-black tracking-[1.26px] uppercase">
