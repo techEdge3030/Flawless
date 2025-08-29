@@ -69,9 +69,9 @@ export default function CuratedCollectionSection() {
   };
 
   return (
-    <section className="py-16 px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-6 items-start">
+    <section className="py-16 px-4 lg:px-6">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-6 gap-6 lg:gap-8 items-stretch">
           {/* Left Section - Image Slider */}
           <div className="lg:col-span-4 relative">
             {/* Only Left Arrow */}
