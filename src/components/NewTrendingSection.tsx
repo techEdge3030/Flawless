@@ -94,7 +94,7 @@ export default function NewTrendingSection() {
             </div>
 
             {/* Title - Keep on one line */}
-            <h2 className="font-eb-garamond text-3xl lg:text-4xl font-medium italic text-black leading-tight tracking-[-0.418px] mb-4 whitespace-nowrap">
+            <h2 className="font-eb-garamond text-2xl font-medium italic text-black leading-[150%] tracking-[-0.264px] mb-4 whitespace-nowrap">
               What&apos;s New & Trending?
             </h2>
 
