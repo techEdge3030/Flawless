@@ -215,10 +215,10 @@ export default function Header() {
                         alt={language.code}
                         width={32}
                         height={32}
-                        className="w-6 h-6 rounded-full object-cover border border-gray-200"
+                        className="w-6 h-6 rounded-full object-cover border border-gray-200 pointer-events-none"
                         quality={95}
                       />
-                      <span className="text-[12px] text-black font-semibold tracking-[0.36px] font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]">
+                      <span className="text-[12px] text-black font-semibold tracking-[0.36px] font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif] pointer-events-none">
                         {language.code}
                       </span>
                     </button>
