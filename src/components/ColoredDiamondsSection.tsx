@@ -33,8 +33,8 @@ export default function ColoredDiamondsSection() {
               finest diamonds and gemstones.
             </p>
 
-            <div className="flex items-center">
-              <button className="px-6 h-[70px] rounded-lg bg-[#F1F1F1] font-hiragino text-lg font-semibold text-black tracking-[-0.198px]">
+            <div className="flex">
+              <button className="w-[422px] h-[65px] rounded-[6px] bg-[#EDE7E5] text-black text-center text-base font-semibold leading-[150%] tracking-[-0.176px]" style={{ fontFamily: 'Hiragino Sans GB, -apple-system, Roboto, Helvetica, sans-serif' }}>
                 SHOP COLOURED DIAMOND RINGS
               </button>
             </div>
