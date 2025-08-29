@@ -71,7 +71,7 @@ export default function CuratedCollectionSection() {
   return (
     <section className="py-16 px-4 lg:px-8">
       <div className="max-w-none mx-auto px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-6 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8 items-stretch">
           {/* Left Section - Image Slider */}
           <div className="lg:col-span-3 relative flex flex-col">
             {/* Only Left Arrow */}
