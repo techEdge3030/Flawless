@@ -13,35 +13,41 @@ interface SliderItem {
 export default function CuratedCollectionSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Placeholder data - to be replaced with actual content later
   const sliderItems: SliderItem[] = [
     {
       id: "oval-vivian",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/placeholder1?width=400",
-      alt: "Oval Vivian Ring",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fdb7cf6075ca848d3bdb7e775ee5e9d74%2F7bd2d46ae0df45aabb9d22e98e97b496?format=webp&width=800",
+      alt: "Oval Vivian engagement ring - 2.00ct",
       title: "Oval Vivian - 2.00ct",
-      price: "$3012",
+      price: "£3012",
     },
     {
       id: "yellow-cushion",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/placeholder2?width=400",
-      alt: "Yellow Cushion Ring",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fdb7cf6075ca848d3bdb7e775ee5e9d74%2F16be445424e7450a889ac55ab38e1477?format=webp&width=800",
+      alt: "Yellow Cushion Avian engagement ring - 3.25ct",
       title: "Yellow Cushion Avian - 3.25ct",
-      price: "$5900",
+      price: "£3900",
     },
     {
       id: "oval-anastasia",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/placeholder3?width=400",
-      alt: "Oval Anastasia Ring",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fdb7cf6075ca848d3bdb7e775ee5e9d74%2F597d746929a345c98b3d5ee021492579?format=webp&width=800",
+      alt: "Oval Anastasia engagement ring - 1.70ct",
       title: "Oval Anastasia - 1.70ct",
-      price: "$2724",
+      price: "£2724",
     },
     {
       id: "oval-morning-star",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/placeholder4?width=400",
-      alt: "Oval Morning Star Ring",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fdb7cf6075ca848d3bdb7e775ee5e9d74%2Fae712d8606cc40678bc604f9a6b06083?format=webp&width=800",
+      alt: "Oval Morning Star engagement ring - 1.30ct",
       title: "Oval Morning Star - 1.30ct",
-      price: "$2880",
+      price: "£2880",
+    },
+    {
+      id: "oval-lucia",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fdb7cf6075ca848d3bdb7e775ee5e9d74%2F7546b8e90c7a471d98dcd0669b6d1dfb?format=webp&width=800",
+      alt: "Oval Lucia engagement ring - 2.00ct",
+      title: "Oval Lucia - 2.00ct",
+      price: "£3012",
     },
   ];
 
