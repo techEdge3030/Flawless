@@ -58,7 +58,7 @@ export default function CuratedCollectionSection() {
   };
 
   const getVisibleSlides = () => {
-    const slidesToShow = 3; // Show 3 items at a time on desktop
+    const slidesToShow = 4; // Show 4 items at a time on desktop
     const slides = [];
 
     for (let i = 0; i < slidesToShow; i++) {
