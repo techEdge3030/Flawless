@@ -238,17 +238,16 @@ export default function Header() {
                         setIsLanguageDropdownOpen(false);
                       }}
                     >
-                      <span className="text-lg w-6 h-6 rounded-full overflow-hidden flex items-center justify-center bg-gray-100 border border-gray-200">
-                        {language.flag}
+                      <Image
+                        src={language.flag}
+                        alt={language.code}
+                        width={24}
+                        height={24}
+                        className="w-6 h-6 rounded-full object-cover"
+                      />
+                      <span className="text-[12px] text-black font-semibold tracking-[0.36px] font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]">
+                        {language.code}
                       </span>
-                      <div className="flex flex-col">
-                        <span className="text-[12px] text-black font-semibold tracking-[0.36px] font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]">
-                          {language.code}
-                        </span>
-                        <span className="text-[10px] text-gray-600 font-normal">
-                          {language.name}
-                        </span>
-                      </div>
                     </button>
                   ))}
                 </div>
