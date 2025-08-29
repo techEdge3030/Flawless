@@ -73,7 +73,7 @@ export default function CuratedCollectionSection() {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-6 gap-6 lg:gap-8 items-stretch">
           {/* Left Section - Image Slider */}
-          <div className="lg:col-span-4 relative">
+          <div className="lg:col-span-4 relative flex flex-col">
             {/* Only Left Arrow */}
             <button
               onClick={prevSlide}
