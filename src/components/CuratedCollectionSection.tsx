@@ -83,13 +83,14 @@ export default function CuratedCollectionSection() {
 
             {/* Slider Container */}
             <div className="overflow-hidden">
-              <div className="grid grid-cols-4 gap-4">
-                {sliderItems.map((item, index) => (
+              {/* Desktop: Show 4 items */}
+              <div className="hidden lg:grid lg:grid-cols-4 gap-6">
+                {sliderItems.slice(0, 4).map((item, index) => (
                   <div
                     key={item.id}
                     className="group cursor-pointer"
                   >
-                    <div className="relative aspect-square bg-stone-50 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mb-4">
+                    <div className="relative aspect-[3/4] bg-stone-50 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mb-4">
                       <Image
                         src={item.image}
                         alt={item.alt}
@@ -97,12 +98,68 @@ export default function CuratedCollectionSection() {
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
-                    
-                    <div className="text-center">
-                      <h4 className="font-helvetica text-sm font-medium text-black leading-[150%] tracking-[-0.154px] mb-1">
+
+                    <div className="text-left">
+                      <h4 className="font-eb-garamond text-xl font-normal text-black leading-[150%] tracking-[-0.22px] mb-1">
                         {item.title}
                       </h4>
-                      <p className="font-helvetica text-sm font-semibold text-black leading-[150%] tracking-[-0.154px]">
+                      <p className="font-helvetica text-base font-medium text-black leading-[150%] tracking-[-0.176px]">
+                        {item.price}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Tablet: Show 2 items */}
+              <div className="hidden md:grid lg:hidden md:grid-cols-2 gap-6">
+                {sliderItems.slice(0, 2).map((item, index) => (
+                  <div
+                    key={item.id}
+                    className="group cursor-pointer"
+                  >
+                    <div className="relative aspect-[3/4] bg-stone-50 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mb-4">
+                      <Image
+                        src={item.image}
+                        alt={item.alt}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+
+                    <div className="text-left">
+                      <h4 className="font-eb-garamond text-xl font-normal text-black leading-[150%] tracking-[-0.22px] mb-1">
+                        {item.title}
+                      </h4>
+                      <p className="font-helvetica text-base font-medium text-black leading-[150%] tracking-[-0.176px]">
+                        {item.price}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Mobile: Show 1 item */}
+              <div className="md:hidden">
+                {sliderItems.slice(0, 1).map((item, index) => (
+                  <div
+                    key={item.id}
+                    className="group cursor-pointer"
+                  >
+                    <div className="relative aspect-[3/4] bg-stone-50 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mb-4 mx-auto max-w-xs">
+                      <Image
+                        src={item.image}
+                        alt={item.alt}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+
+                    <div className="text-center">
+                      <h4 className="font-eb-garamond text-xl font-normal text-black leading-[150%] tracking-[-0.22px] mb-1">
+                        {item.title}
+                      </h4>
+                      <p className="font-helvetica text-base font-medium text-black leading-[150%] tracking-[-0.176px]">
                         {item.price}
                       </p>
                     </div>
