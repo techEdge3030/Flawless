@@ -94,7 +94,7 @@ export default function HeroSection() {
         <div className="text-center max-w-4xl mx-auto">
           {/* Main Headline */}
           <h1 className="font-serif text-[50px] font-normal leading-[150%] tracking-[-0.55px] text-center mb-6 sm:mb-8" style={{ color: '#EDE7E5' }}>
-            Love Made Visible ...
+            <span className="italic">Love</span> Made Visible ...
           </h1>
 
           {/* Description */}
