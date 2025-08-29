@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function BespokeSection() {
+export default function DesignBespokeSection() {
   const serviceFeatures = [
     "A tailored experience in our calm and inviting location in Hatton Garden.",
     "A showcase of unique lab-grown or earth-mined diamonds and coloured gemstones",
@@ -27,23 +27,25 @@ export default function BespokeSection() {
 
           {/* Right side - Content */}
           <div className="flex-1">
-            <div className="mb-6">
-              <span className="font-hiragino text-base font-semibold text-black tracking-[-0.176px] block mb-4">
-                Go on a journey to design your ring from scratch, with one of
-                our expert jewellers in Hatton Garden, London.
-              </span>
-            </div>
-
-            <h2 className="font-eb-garamond text-4xl italic font-medium text-black mb-8 tracking-[-0.44px]">
+            {/* Title first */}
+            <h2 className="font-eb-garamond text-4xl italic font-medium text-black mb-6 tracking-[-0.44px]">
               Design Your Own Bespoke Ring.
             </h2>
+
+            {/* Introductory text */}
+            <div className="mb-8">
+              <p className="text-base font-medium text-black leading-[150%] tracking-[-0.176px]">
+                Go on a journey to design your ring from scratch, with one of
+                our expert jewellers in Hatton Garden, London.
+              </p>
+            </div>
 
             {/* Service features list */}
             <div className="space-y-4 mb-12">
               {serviceFeatures.map((feature, index) => (
                 <div key={index} className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-black rounded-full mt-3 flex-shrink-0"></div>
-                  <p className="font-helvetica text-[22px] font-medium text-black leading-[150%] tracking-[-0.242px]">
+                  <p className="text-base font-medium text-black leading-[150%] tracking-[-0.176px]">
                     {feature}
                   </p>
                 </div>
@@ -51,22 +53,28 @@ export default function BespokeSection() {
             </div>
 
             {/* CTA Button */}
-            <button className="btn-primary px-12 py-4 rounded text-lg font-semibold mb-8">
+            <button className="bg-[#A39186] text-white px-8 py-4 rounded text-sm font-semibold uppercase tracking-[0.36px] hover:bg-[#8B7F73] transition-colors mb-8 w-full max-w-[402px]">
               BOOK A COMPLIMENTARY CONSULTATION
             </button>
 
             {/* Trust indicators */}
             <div className="text-center">
-              <p className="font-helvetica text-xl font-medium text-black leading-[150%] tracking-[-0.22px] mb-4">
+              <p className="text-base font-medium text-black leading-[150%] tracking-[-0.176px] mb-4">
                 Engagement Rings Loved by thousands worldwide
               </p>
-              <Image
-                src="https://api.builder.io/api/v1/image/assets/TEMP/7f4329e1342426032e18455e40ab3c4efa4cb8eb?width=810"
-                alt="Trust indicators"
-                width={405}
-                height={51}
-                className="mx-auto"
-              />
+
+              {/* Google Reviews as elements */}
+              <div className="flex items-center justify-center gap-2">
+                <span className="text-[#4285F4] text-lg font-medium">5.0</span>
+                <div className="flex gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5 fill-[#FFD700]" viewBox="0 0 24 24">
+                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                  ))}
+                </div>
+                <span className="text-[#4285F4] text-lg font-medium">1,171 Google reviews</span>
+              </div>
             </div>
           </div>
         </div>
