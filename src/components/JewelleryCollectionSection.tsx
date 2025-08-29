@@ -1,46 +1,79 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+
+interface Collection {
+  name: string;
+  image: string;
+  alt: string;
+}
 
 export default function JewelleryCollectionSection() {
-  const collections = [
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const collections: Collection[] = [
     {
       name: "Engagement Rings",
       image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/16ed31e4e075f6ce9a18bbef0964305656dfd5b0?width=803",
-      overlayImages: [
-        "https://api.builder.io/api/v1/image/assets/TEMP/86453644248c168a7f517d5dbc37042de8fef1da?width=839",
-        "https://api.builder.io/api/v1/image/assets/TEMP/501c32165341dbc63b4e8000f1ee73b045cb2943?width=817",
-      ],
+        "https://cdn.builder.io/api/v1/image/assets%2Fdb7cf6075ca848d3bdb7e775ee5e9d74%2F7281cc8b0e654e528ea459ca745721e9?format=webp&width=800",
+      alt: "Elegant engagement rings collection",
     },
     {
       name: "Wedding Rings",
       image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/6f8fcad43172f2ec937885e62a6c57070a435633?width=803",
-      overlayImages: [
-        "https://api.builder.io/api/v1/image/assets/TEMP/36b590ca832ef990ca074e428a0c007c8c14607d?width=880",
-        "https://api.builder.io/api/v1/image/assets/TEMP/ae682195825d7fa22f29fde2aa766e15cd73524c?width=1814",
-        "https://api.builder.io/api/v1/image/assets/TEMP/7c04e3f7e95bae8e4e34a8db7e5063ed1a663b68?width=1093",
-      ],
+        "https://cdn.builder.io/api/v1/image/assets%2Fdb7cf6075ca848d3bdb7e775ee5e9d74%2Ff5346253ad9e4cb0bb7a9ddfa59efaf0?format=webp&width=800",
+      alt: "Beautiful wedding rings collection",
     },
     {
       name: "Necklaces",
       image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/d3a7cb6b1ff7abf12d4a4057f236aaf31f21c153?width=803",
-      overlayImages: [
-        "https://api.builder.io/api/v1/image/assets/TEMP/35c1bc2448f6c424d0accfc77abd8b969a9f87d8?width=857",
-      ],
+        "https://cdn.builder.io/api/v1/image/assets%2Fdb7cf6075ca848d3bdb7e775ee5e9d74%2F72732b04ea3d47a7a4eae2b9daf79d89?format=webp&width=800",
+      alt: "Stunning necklaces collection",
     },
     {
       name: "Bracelets",
       image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/9f477a64986008b15ae0744e0eaec0e072792e9c?width=803",
-      overlayImages: [
-        "https://api.builder.io/api/v1/image/assets/TEMP/378a7ec6009f02f71ccd120e19de44ddba71b258?width=1004",
-        "https://api.builder.io/api/v1/image/assets/TEMP/b6d4ee4e9386211729a3b94bdc84ecdb357ae130?width=1013",
-        "https://api.builder.io/api/v1/image/assets/TEMP/0939f898bbaec7a08ea0525211657421a2c5a33a?width=864",
-      ],
+        "https://cdn.builder.io/api/v1/image/assets%2Fdb7cf6075ca848d3bdb7e775ee5e9d74%2F75bcb099b547406f9e547414baf48c91?format=webp&width=800",
+      alt: "Exquisite bracelets collection",
+    },
+    {
+      name: "Earrings",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2Fdb7cf6075ca848d3bdb7e775ee5e9d74%2Fc7b340f90a1b45a698ad712fcc5c108c?format=webp&width=800",
+      alt: "Beautiful earrings collection",
+    },
+    {
+      name: "Mens Rings",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2Fdb7cf6075ca848d3bdb7e775ee5e9d74%2F84b9ea9e6c4a46d191dd322f16d5234a?format=webp&width=800",
+      alt: "Sophisticated mens rings collection",
     },
   ];
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % collections.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide(
+      (prev) => (prev - 1 + collections.length) % collections.length,
+    );
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
+  const getVisibleSlides = () => {
+    const slidesToShow = 4; // Show 4 items at a time on desktop
+    const slides = [];
+
+    for (let i = 0; i < slidesToShow; i++) {
+      const index = (currentSlide + i) % collections.length;
+      slides.push(collections[index]);
+    }
+    return slides;
+  };
 
   return (
     <section className="py-16 px-8">
