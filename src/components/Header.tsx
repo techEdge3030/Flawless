@@ -1,7 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Header() {
+  const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState({
+    code: "GBP",
+    flag: "🇬🇧",
+    name: "United Kingdom"
+  });
+
+  const languages = [
+    { code: "GBP", flag: "🇬🇧", name: "United Kingdom" },
+    { code: "USD", flag: "🇺🇸", name: "United States" },
+    { code: "JPY", flag: "🇯🇵", name: "Japan" },
+    { code: "CNY", flag: "🇨🇳", name: "China" },
+  ];
   return (
     <header className="relative w-full h-[124px] shadow-lg">
       {/* Background Image */}
