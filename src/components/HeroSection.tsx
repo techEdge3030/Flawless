@@ -93,7 +93,7 @@ export default function HeroSection() {
       <div className="relative z-10 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl mx-auto">
           {/* Main Headline */}
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-normal text-stone-200 mb-6 sm:mb-8 leading-tight tracking-tight">
+          <h1 className="font-serif text-[50px] font-normal leading-[150%] tracking-[-0.55px] text-center mb-6 sm:mb-8" style={{ color: '#EDE7E5' }}>
             Love Made Visible ...
           </h1>
 
