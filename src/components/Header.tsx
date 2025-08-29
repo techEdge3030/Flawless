@@ -188,7 +188,7 @@ export default function Header() {
             <div className="w-px h-6 bg-gray-300 mx-2"></div>
 
             {/* Language Dropdown */}
-            <div className="relative">
+            <div className="relative" ref={dropdownRef}>
               <button
                 className="flex items-center space-x-2 hover:bg-gray-100 px-3 py-2 rounded"
                 onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}
