@@ -7,15 +7,15 @@ export default function Header() {
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState({
     code: "GBP",
-    flag: "https://flagcdn.com/w40/gb.png"
+    flag: "https://flagcdn.com/w80/gb.png"
   });
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const languages = [
-    { code: "GBP", flag: "https://flagcdn.com/w40/gb.png" },
-    { code: "USD", flag: "https://flagcdn.com/w40/us.png" },
-    { code: "JPY", flag: "https://flagcdn.com/w40/jp.png" },
-    { code: "CNY", flag: "https://flagcdn.com/w40/cn.png" },
+    { code: "GBP", flag: "https://flagcdn.com/w80/gb.png" },
+    { code: "USD", flag: "https://flagcdn.com/w80/us.png" },
+    { code: "JPY", flag: "https://flagcdn.com/w80/jp.png" },
+    { code: "CNY", flag: "https://flagcdn.com/w80/cn.png" },
   ];
 
   // Close dropdown when clicking outside
