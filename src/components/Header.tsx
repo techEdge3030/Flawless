@@ -200,28 +200,35 @@ export default function Header() {
 
               {/* Dropdown Menu */}
               {isLanguageDropdownOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
-                  {languages.map((language) => (
-                    <button
+                <div className="absolute right-0 top-full mt-1 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-[100] overflow-hidden">
+                  {languages.map((language, index) => (
+                    <div
                       key={language.code}
-                      className="w-full flex items-center space-x-3 px-4 py-3 text-left hover:bg-gray-100 transition-colors duration-150 ease-in-out first:rounded-t-lg last:rounded-b-lg cursor-pointer relative min-h-[48px]"
+                      className={`
+                        block w-full px-4 py-3 text-left cursor-pointer
+                        hover:bg-gray-100 transition-colors duration-150 ease-in-out
+                        ${index === 0 ? 'rounded-t-lg' : ''}
+                        ${index === languages.length - 1 ? 'rounded-b-lg' : ''}
+                      `}
                       onClick={() => {
                         setSelectedLanguage(language);
                         setIsLanguageDropdownOpen(false);
                       }}
                     >
-                      <Image
-                        src={language.flag}
-                        alt={language.code}
-                        width={32}
-                        height={32}
-                        className="w-6 h-6 rounded-full object-cover border border-gray-200 pointer-events-none"
-                        quality={95}
-                      />
-                      <span className="text-[12px] text-black font-semibold tracking-[0.36px] font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif] pointer-events-none">
-                        {language.code}
-                      </span>
-                    </button>
+                      <div className="flex items-center space-x-3 pointer-events-none">
+                        <Image
+                          src={language.flag}
+                          alt={language.code}
+                          width={32}
+                          height={32}
+                          className="w-6 h-6 rounded-full object-cover border border-gray-200"
+                          quality={95}
+                        />
+                        <span className="text-[12px] text-black font-semibold tracking-[0.36px] font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]">
+                          {language.code}
+                        </span>
+                      </div>
+                    </div>
                   ))}
                 </div>
               )}
