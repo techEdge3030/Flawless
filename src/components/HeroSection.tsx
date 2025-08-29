@@ -70,16 +70,19 @@ export default function HeroSection() {
         {/* Left hover area */}
         <div
           onClick={prevSlide}
-          className="w-1/2 h-full cursor-pointer relative group"
+          className="w-[10%] h-full cursor-pointer relative group"
           aria-label="Previous slide"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
 
+        {/* Center non-interactive area */}
+        <div className="w-[80%] h-full"></div>
+
         {/* Right hover area */}
         <div
           onClick={nextSlide}
-          className="w-1/2 h-full cursor-pointer relative group"
+          className="w-[10%] h-full cursor-pointer relative group"
           aria-label="Next slide"
         >
           <div className="absolute inset-0 bg-gradient-to-l from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
