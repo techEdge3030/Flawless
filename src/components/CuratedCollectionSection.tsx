@@ -185,7 +185,7 @@ export default function CuratedCollectionSection() {
           </div>
 
           {/* Right Section - Content */}
-          <div className="lg:col-span-2 lg:pl-6 flex flex-col justify-center">
+          <div className="lg:col-span-2 lg:pl-8 flex flex-col justify-center">
             {/* Subtitle */}
             <div className="mb-3">
               <span className="font-hiragino text-xs lg:text-sm font-semibold text-black tracking-[1.26px] uppercase">
