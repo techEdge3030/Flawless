@@ -47,12 +47,7 @@ export default function BespokeSection() {
             </h2>
 
             <p className="text-[20px] font-normal text-[#806C63] leading-[168%] tracking-[-0.22px] mb-8 max-w-[647px] mx-auto" style={{ fontFamily: 'Helvetica Now Text, -apple-system, Roboto, Helvetica, sans-serif' }}>
-              The term &apos;bespoke&apos; refers to jewellery designed and crafted from<br />
-              scratch. From necklaces to bracelets, engagement rings to<br />
-              anniversary gifts, milestone birthdays and more, we offer an intimate<br />
-              and personalised service, available both virtually or in person. Our<br />
-              team of jewellers in Hatton Garden, London are experts at working<br />
-              with customers all over the world to bring their bespoke visions to life.
+              The term &apos;bespoke&apos; refers to jewellery designed and crafted from scratch. From necklaces to bracelets, engagement rings to anniversary gifts, milestone birthdays and more, we offer an intimate and personalised service, available both virtually or in person. Our team of jewellers in Hatton Garden, London are experts at working with customers all over the world to bring their bespoke visions to life.
             </p>
 
             <button className="bg-[#A39186] text-white px-8 py-3 text-sm font-medium uppercase tracking-wide hover:bg-[#8B7F73] transition-all duration-200 rounded">
@@ -61,21 +56,21 @@ export default function BespokeSection() {
           </div>
 
           {/* Right Column - Dropdown Menu */}
-          <div className="space-y-0 flex flex-col justify-start h-full">
+          <div className="flex flex-col h-full">
             {bespokeFeatures.map((feature, index) => (
-              <div key={index} className="relative">
+              <div key={index} className="border-b border-[#806C63] last:border-b-0">
                 <button
                   onClick={() => toggleItem(index)}
-                  className="w-full py-6 flex items-center justify-between text-left hover:bg-black/5 transition-colors duration-200"
+                  className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-black/5 transition-colors duration-200"
                 >
                   <span
-                    className="text-[20px] font-normal text-[#806C63] leading-[150%] tracking-[-0.22px] flex-1"
+                    className="text-base font-normal text-[#806C63] leading-[150%] tracking-[-0.22px] flex-1"
                     style={{ fontFamily: 'Helvetica Now Text, -apple-system, Roboto, Helvetica, sans-serif' }}
                   >
                     {feature.title}
                   </span>
                   <svg
-                    className={`w-[23px] h-[11px] text-[#806C63] transition-transform duration-300 ml-4 flex-shrink-0 ${
+                    className={`w-[16px] h-[8px] text-[#806C63] transition-transform duration-300 ml-4 flex-shrink-0 ${
                       openItem === index ? 'rotate-180' : ''
                     }`}
                     width="27"
@@ -92,17 +87,16 @@ export default function BespokeSection() {
                   </svg>
                 </button>
 
-                {/* Horizontal separator line */}
-                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#806C63]"></div>
-
                 <div
                   className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    openItem === index ? 'max-h-32 pb-6' : 'max-h-0'
+                    openItem === index ? 'max-h-24 opacity-100' : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <p className="text-sm text-gray-700 leading-relaxed">
-                    {feature.content}
-                  </p>
+                  <div className="px-6 pb-4">
+                    <p className="text-sm text-gray-700 leading-relaxed">
+                      {feature.content}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
