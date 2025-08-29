@@ -65,54 +65,45 @@ export default function GuidesSection() {
 
         {/* Slider Container */}
         <div className="relative">
-          {/* Left Arrow */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-3 hover:opacity-80 transition-opacity duration-200"
-            aria-label="Previous guides"
-          >
-            <svg
-              width="23"
-              height="35"
-              viewBox="0 0 23 35"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-[30px] h-[17px] rotate-90"
-            >
-              <path
-                d="M3.00009 17.2884L19.1045 2.54736L20.0811 3.46285L4.97569 17.2895L20.0699 31.1359L19.0923 32.0504L3.00009 17.2884Z"
-                fill="#A39186"
-                stroke="#A39986"
-                strokeWidth="3"
-              />
-            </svg>
-          </button>
-
-          {/* Right Arrow */}
-          <button
-            onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-3 hover:opacity-80 transition-opacity duration-200"
-            aria-label="Next guides"
-          >
-            <svg
-              width="23"
-              height="36"
-              viewBox="0 0 23 36"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-[30px] h-[17px] -rotate-90"
-            >
-              <path
-                d="M19.9999 18.054L3.89549 33.1636L2.91895 32.2252L18.0243 18.0529L2.93006 3.86033L3.90772 2.92301L19.9999 18.054Z"
-                fill="#A39186"
-                stroke="#A39986"
-                strokeWidth="3"
-              />
-            </svg>
-          </button>
-
           {/* Guides Display */}
-          <div className="mx-16">
+          <div className="mx-16 relative">
+            {/* Left Arrow - positioned relative to image height */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-[-64px] top-[calc(50%-3rem)] z-10 p-3 hover:bg-stone-100 rounded-full transition-colors duration-200 group"
+              aria-label="Previous guides"
+              style={{ top: 'calc(40% - 1.5rem)' }}
+            >
+              <svg
+                className="w-6 h-6 text-stone-500 group-hover:text-stone-700 transition-colors"
+                viewBox="0 0 26 46"
+                fill="none"
+              >
+                <path
+                  d="M24.2639 3.66309L5.23267 23.1631L24.2502 42.6914L24.5872 43.0371L24.2542 43.3857L23.0002 44.6982L22.6418 45.0732L22.2805 44.7021L1.64185 23.5107L1.302 23.1611L1.64185 22.8125L22.2961 1.65039L22.6584 1.2793L23.0159 1.65527L24.2688 2.96973L24.6008 3.31836L24.2639 3.66309Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+
+            {/* Right Arrow - positioned relative to image height */}
+            <button
+              onClick={nextSlide}
+              className="absolute right-[-64px] top-[calc(50%-3rem)] z-10 p-3 hover:bg-stone-100 rounded-full transition-colors duration-200 group"
+              aria-label="Next guides"
+              style={{ top: 'calc(40% - 1.5rem)' }}
+            >
+              <svg
+                className="w-6 h-6 text-stone-500 group-hover:text-stone-700 transition-colors"
+                viewBox="0 0 26 47"
+                fill="none"
+              >
+                <path
+                  d="M1.45984 43.7205L20.5048 23.7195L1.47351 3.69019L1.15027 3.34937L1.47058 3.00464L2.72449 1.65894L3.08679 1.27026L3.453 1.65601L24.0907 23.3767L24.4188 23.7214L24.0907 24.0662L3.4364 45.7566L3.07019 46.1414L2.70886 45.7527L1.45593 44.405L1.13562 44.0603L1.45984 43.7205Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
             {/* Desktop: Show 3 guides */}
             <div className="hidden lg:grid lg:grid-cols-3 gap-8">
               {getVisibleSlides().map((guide, index) => (
