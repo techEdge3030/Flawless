@@ -201,7 +201,9 @@ export default function Header() {
                 className="flex items-center space-x-2 hover:bg-gray-100 px-3 py-2 rounded"
                 onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}
               >
-                <span className="text-lg">{selectedLanguage.flag}</span>
+                <span className="text-lg w-6 h-6 rounded-full overflow-hidden flex items-center justify-center bg-gray-100 border border-gray-200">
+                  {selectedLanguage.flag}
+                </span>
                 <span className="text-[12px] text-black font-semibold tracking-[0.36px] font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]">
                   {selectedLanguage.code}
                 </span>
