@@ -223,30 +223,6 @@ export default function JewelleryCollectionSection() {
           </div>
         </div>
 
-        {/* Curated Collection Call-to-Action */}
-        <div className="max-w-md ml-auto">
-          <div className="mb-4">
-            <span className="font-hiragino text-lg font-semibold text-black tracking-[1.26px] uppercase">
-              CURATED COLLECTION
-            </span>
-          </div>
-
-          <h3 className="font-eb-garamond text-4xl font-normal text-black leading-[150%] tracking-[-0.44px] mb-6">
-            Engagement Rings
-          </h3>
-
-          <p className="font-helvetica text-lg font-medium text-black leading-[150%] tracking-[-0.198px] mb-8">
-            Let us choose you the perfect diamond. All you have to do is select
-            from Ring Designs that have been chosen over and over again as
-            perfect heirlooms. These engagement rings are crafted by hand using
-            sustainable methods and heritage techniques in Hatton Garden. They
-            are made to order and take 6-8 weeks to complete.
-          </p>
-
-          <button className="w-full btn-primary py-4 rounded text-lg font-semibold">
-            SHOP DIAMOND ENGAGEMENT RINGS
-          </button>
-        </div>
       </div>
     </section>
   );
