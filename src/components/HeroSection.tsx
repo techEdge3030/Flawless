@@ -1,83 +1,130 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function HeroSection() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    {
+      id: 1,
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fdb7cf6075ca848d3bdb7e775ee5e9d74%2Ff6a6f4fa75f4474f9519dde3fca179e8?format=webp&width=2000",
+      alt: "Hands showcasing engagement rings",
+    },
+    {
+      id: 2,
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fdb7cf6075ca848d3bdb7e775ee5e9d74%2Fea67d7d4fe884c37921d3e6f75a10a5a?format=webp&width=2000",
+      alt: "Elegant rings on fabric background",
+    },
+  ];
+
+  // Auto-advance slider every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [slides.length]);
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-stone-800 via-stone-700 to-stone-600 overflow-hidden">
-      {/* Background Images */}
+      {/* Banner Slider */}
       <div className="absolute inset-0">
-        {/* Left image - hands with rings */}
-        <div className="absolute left-0 top-0 w-1/2 h-full">
-          <Image
-            src="https://api.builder.io/api/v1/image/assets/TEMP/a56b4c3e5efe8b9c7e3cfbcf2312c4f8dd010431?width=1389"
-            alt="Hands showing engagement rings"
-            fill
-            className="object-cover object-center opacity-40"
-          />
-        </div>
-
-        {/* Right image - additional ring showcase */}
-        <div className="absolute right-0 top-0 w-1/2 h-full">
-          <Image
-            src="https://api.builder.io/api/v1/image/assets/TEMP/1b9a1aee46dc43e6f0f28779037ddb8845972e29?width=1658"
-            alt="Ring showcase"
-            fill
-            className="object-cover object-center opacity-30"
-          />
-        </div>
-
-        {/* Center overlay image */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-full">
-          <Image
-            // src="https://api.builder.io/api/v1/image/assets/TEMP/1b3e7fd22e3325ea58eaeaec5c7232fe8b232e91?width=1418"
-            src="https://api.builder.io/api/v1/image/assets/TEMP/8b413c852bea076224c73850eba9b33ec328c3f1?width=2562"
-            alt="Featured ring"
-            fill
-            className="object-cover object-center opacity-50"
-          />
-        </div>
+        {slides.map((slide, index) => (
+          <div
+            key={slide.id}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              index === currentSlide ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <Image
+              src={slide.image}
+              alt={slide.alt}
+              fill
+              className="object-cover object-center"
+              priority={index === 0}
+            />
+          </div>
+        ))}
 
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/40"></div>
       </div>
 
+      {/* Hover Navigation Areas */}
+      <div className="absolute inset-0 flex z-10 pointer-events-none">
+        {/* Left hover area */}
+        <div
+          onClick={prevSlide}
+          className="w-[10%] h-full cursor-pointer relative group pointer-events-auto"
+          aria-label="Previous slide"
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </div>
+
+        {/* Center non-interactive area */}
+        <div className="w-[80%] h-full pointer-events-none"></div>
+
+        {/* Right hover area */}
+        <div
+          onClick={nextSlide}
+          className="w-[10%] h-full cursor-pointer relative group pointer-events-auto"
+          aria-label="Next slide"
+        >
+          <div className="absolute inset-0 bg-gradient-to-l from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </div>
+      </div>
+
       {/* Content */}
-      <div className="relative z-10 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
+      <div className="relative z-20 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl mx-auto">
           {/* Main Headline */}
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-normal text-stone-200 mb-6 sm:mb-8 leading-tight tracking-tight">
-            Love Made Visible ...
+          <h1 className="font-serif text-[50px] font-normal leading-[150%] tracking-[-0.55px] text-center mb-6 sm:mb-8" style={{ color: '#EDE7E5' }}>
+            <span className="italic" style={{ fontFamily: '"EB Garamond", serif' }}>Love</span> Made Visible ...
           </h1>
 
           {/* Description */}
           <div className="max-w-3xl mx-auto mb-8 sm:mb-12">
-            <p className="text-white text-lg sm:text-xl lg:text-2xl leading-relaxed tracking-wide">
-              <span className="font-bold">
-                Handcrafted by our expert Hatton Garden Jewellers,
-              </span>{" "}
-              <span className="font-medium">
-                our diamond engagement rings are British heritage,
-                heirloom-quality pieces. Every ring is a promise: exquisitely
-                designed, consciously crafted and perfected to last lifetimes.
-              </span>
-            </p>
-            <p className="text-white text-lg sm:text-xl lg:text-2xl mt-4 font-medium">
-              Time to share your love story.
+            <p className="text-white text-[20px] leading-[150%] tracking-[-0.22px] text-center font-[Helvetica_Now_Text,_-apple-system,_Roboto,_Helvetica,_sans-serif]">
+              <span className="font-bold">Handcrafted by our expert Hatton Garden Jewellers, our diamond engagement</span><br />
+              <span className="font-normal">rings are British heritage, heirloom-quality pieces. Every ring is a promise:</span><br />
+              <span className="font-normal">exquisitely designed, consciously crafted and perfected to last lifetimes.</span><br />
+              <span className="font-normal">Time to share your love story.</span>
             </p>
           </div>
 
           {/* Call to Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center z-30 relative">
             <Link
               href="/engagement"
-              className="bg-white text-black px-8 py-4 text-base font-semibold uppercase tracking-wide hover:bg-stone-100 transition-colors duration-300 min-w-[280px] text-center"
+              className="flex items-center justify-center w-[350px] h-[44px] text-[16px] font-semibold uppercase leading-[150%] tracking-[0.16px] hover:text-white transition-all duration-300 text-center font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif] text-black rounded-md"
+              style={{ backgroundColor: '#e0dddaCC' }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#000000CC'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#e0dddaCC'}
             >
               Shop Engagement Rings
             </Link>
 
             <Link
               href="/book-appointment"
-              className="bg-transparent border-2 border-white text-white px-8 py-4 text-base font-semibold uppercase tracking-wide hover:bg-white hover:text-black transition-colors duration-300 min-w-[280px] text-center"
+              className="flex items-center justify-center w-[350px] h-[45px] text-[16px] font-semibold uppercase leading-[150%] tracking-[0.16px] hover:text-white transition-all duration-300 text-center font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif] text-black rounded-md"
+              style={{ backgroundColor: '#e0dddaCC' }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#000000CC'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#e0dddaCC'}
             >
               Book Your Appointment
             </Link>
@@ -85,22 +132,6 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 14l-7 7m0 0l-7-7m7 7V3"
-          />
-        </svg>
-      </div>
     </section>
   );
 }
