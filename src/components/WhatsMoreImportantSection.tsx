@@ -39,32 +39,31 @@ export default function WhatsMoreImportantSection() {
               </div>
             </div>
 
-            {/* Content */}
-            <div className="text-center">
-              <h4 className="text-stone-600 font-semibold text-lg mb-6 tracking-wide">
-                Start Designing Your Ring
-              </h4>
-
-              <p className="text-black text-sm lg:text-base leading-relaxed mb-8 font-medium">
-                Its time to build your dream ring. Start by choosing your favourite 
-                engagement ring design then pair it with your ideal diamond or 
-                gemstone. Finish by selecting your favourite metal colour. These rings 
-                are made to order within 8 weeks.
-              </p>
-
+            {/* Link */}
+            <div className="text-left mb-6">
               <Link
                 href="/design-ring"
                 className="inline-flex items-center text-stone-700 font-semibold text-lg hover:text-stone-800 transition-colors duration-300"
               >
                 Start Designing Your Ring
-                <svg 
-                  className="ml-2 w-3 h-4 transform rotate-90" 
-                  fill="currentColor" 
+                <svg
+                  className="ml-2 w-3 h-4"
+                  fill="currentColor"
                   viewBox="0 0 9 13"
                 >
                   <path d="M0.224965 11.6535L0.680433 11.2741L6.41482 6.50947L0.695125 1.72429L0.239461 1.34394L0.692005 0.959639L1.09275 0.61923L1.41431 0.346123L1.73728 0.616962L8.32635 6.12764L8.78689 6.5119L8.32556 6.89522L1.71933 12.3845L1.39581 12.6547L0.675741 12.0387L0.224965 11.6535Z"/>
                 </svg>
               </Link>
+            </div>
+
+            {/* Description */}
+            <div className="text-left">
+              <p className="text-black text-sm lg:text-base leading-relaxed font-medium">
+                Its time to build your dream ring. Start by choosing your favourite
+                engagement ring design then pair it with your ideal diamond or
+                gemstone. Finish by selecting your favourite metal colour. These rings
+                are made to order within 8 weeks.
+              </p>
             </div>
           </div>
 
@@ -92,31 +91,30 @@ export default function WhatsMoreImportantSection() {
               </div>
             </div>
 
-            {/* Content */}
-            <div className="text-center">
-              <h4 className="text-stone-600 font-semibold text-lg mb-6 tracking-wide">
-                Shop Ready to Ship Rings
-              </h4>
-
-              <p className="text-black text-sm lg:text-base leading-relaxed mb-8 font-medium">
-                Sometimes love can&apos;t wait. These fully finished and heritage hand 
-                crafted rings are in stock and ready to ship. Receive your ring fully 
-                resized, under 2 weeks.
-              </p>
-
+            {/* Link */}
+            <div className="text-left mb-6">
               <Link
                 href="/ready-to-ship"
                 className="inline-flex items-center text-stone-700 font-semibold text-lg hover:text-stone-800 transition-colors duration-300"
               >
                 Shop Ready to Ship Rings
-                <svg 
-                  className="ml-2 w-3 h-4 transform rotate-90" 
-                  fill="currentColor" 
+                <svg
+                  className="ml-2 w-3 h-4"
+                  fill="currentColor"
                   viewBox="0 0 9 13"
                 >
                   <path d="M0.224965 11.6535L0.680433 11.2741L6.41482 6.50947L0.695125 1.72429L0.239461 1.34394L0.692005 0.959639L1.09275 0.61923L1.41431 0.346123L1.73728 0.616962L8.32635 6.12764L8.78689 6.5119L8.32556 6.89522L1.71933 12.3845L1.39581 12.6547L0.675741 12.0387L0.224965 11.6535Z"/>
                 </svg>
               </Link>
+            </div>
+
+            {/* Description */}
+            <div className="text-left">
+              <p className="text-black text-sm lg:text-base leading-relaxed font-medium">
+                Sometimes love can&apos;t wait. These fully finished and heritage hand
+                crafted rings are in stock and ready to ship. Receive your ring fully
+                resized, under 2 weeks.
+              </p>
             </div>
           </div>
 
@@ -144,44 +142,35 @@ export default function WhatsMoreImportantSection() {
               </div>
             </div>
 
-            {/* Content */}
-            <div className="text-center">
-              <h4 className="text-stone-600 font-semibold text-lg mb-6 tracking-wide">
-                Shop Curated Collection
-              </h4>
-
-              <p className="text-black text-sm lg:text-base leading-relaxed mb-8 font-medium">
-                Prefer not to make a hundred tiny decisions? We&apos;ve combined our 
-                most-loved ring designs with hand-selected, exquisite diamonds, so 
-                you can entrust our team with curating your one-of-a-kind heirloom. 
-                Made to order. Crafted by experts. Completed within 8 weeks.
-              </p>
-
+            {/* Link */}
+            <div className="text-left mb-6">
               <Link
                 href="/signature-rings"
                 className="inline-flex items-center text-stone-700 font-semibold text-lg hover:text-stone-800 transition-colors duration-300"
               >
                 Shop Curated Collection
-                <svg 
-                  className="ml-2 w-3 h-4 transform rotate-90" 
-                  fill="currentColor" 
+                <svg
+                  className="ml-2 w-3 h-4"
+                  fill="currentColor"
                   viewBox="0 0 9 13"
                 >
                   <path d="M0.224965 11.6535L0.680433 11.2741L6.41482 6.50947L0.695125 1.72429L0.239461 1.34394L0.692005 0.959639L1.09275 0.61923L1.41431 0.346123L1.73728 0.616962L8.32635 6.12764L8.78689 6.5119L8.32556 6.89522L1.71933 12.3845L1.39581 12.6547L0.675741 12.0387L0.224965 11.6535Z"/>
                 </svg>
               </Link>
             </div>
+
+            {/* Description */}
+            <div className="text-left">
+              <p className="text-black text-sm lg:text-base leading-relaxed font-medium">
+                Prefer not to make a hundred tiny decisions? We&apos;ve combined our
+                most-loved ring designs with hand-selected, exquisite diamonds, so
+                you can entrust our team with curating your one-of-a-kind heirloom.
+                Made to order. Crafted by experts. Completed within 8 weeks.
+              </p>
+            </div>
           </div>
         </div>
 
-        {/* Additional Information */}
-        <div className="mt-16 lg:mt-20 text-center">
-          <p className="text-stone-600 text-lg font-medium max-w-3xl mx-auto leading-relaxed">
-            Every piece is a testament to British craftsmanship, designed to
-            become a cherished heirloom that tells your unique love story for
-            generations to come.
-          </p>
-        </div>
       </div>
     </section>
   );
