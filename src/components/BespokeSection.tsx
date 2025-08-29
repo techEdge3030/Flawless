@@ -61,13 +61,13 @@ export default function BespokeSection() {
               <div key={index} className="border-b border-[#7f6c62] last:border-b-0">
                 <button
                   onClick={() => toggleItem(index)}
-                  className="w-full py-4 flex items-center justify-between text-left hover:bg-black/5 transition-colors duration-200"
+                  className="w-full py-4 flex items-center justify-between text-left hover:bg-black/5 transition-colors duration-200 pr-4"
                 >
-                  <span className="font-helvetica text-sm font-medium text-[#7f6c62] uppercase tracking-wide">
+                  <span className="font-helvetica text-sm font-medium text-[#7f6c62] uppercase tracking-wide flex-1">
                     {feature.title}
                   </span>
                   <svg
-                    className={`w-4 h-4 text-[#7f6c62] transition-transform duration-200 ${
+                    className={`w-4 h-4 text-[#7f6c62] transition-transform duration-300 ml-4 mr-2 flex-shrink-0 ${
                       openItem === index ? 'rotate-180' : ''
                     }`}
                     fill="none"
@@ -83,13 +83,15 @@ export default function BespokeSection() {
                   </svg>
                 </button>
 
-                {openItem === index && (
-                  <div className="pb-4">
-                    <p className="text-sm text-gray-700 leading-relaxed">
-                      {feature.content}
-                    </p>
-                  </div>
-                )}
+                <div
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    openItem === index ? 'max-h-32 pb-4' : 'max-h-0'
+                  }`}
+                >
+                  <p className="text-sm text-gray-700 leading-relaxed px-0">
+                    {feature.content}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
