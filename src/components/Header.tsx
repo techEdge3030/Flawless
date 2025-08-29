@@ -170,13 +170,20 @@ export default function Header() {
 
             {/* Cart */}
             <button className="flex items-center space-x-2 hover:bg-gray-100 px-3 py-2 rounded relative">
-              <Image
-                src="https://api.builder.io/api/v1/image/assets/TEMP/6bde2bb6562689746d93fdf82530dc37f3529327?width=50"
-                alt="Cart"
-                width={25}
-                height={22}
-                className="w-[25px] h-[22px]"
-              />
+              <svg
+                className="w-[25px] h-[22px] text-black"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.293 2.293A1 1 0 004 16h12M17 13v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4z"
+                />
+              </svg>
               <span className="text-[12px] text-black font-semibold tracking-[0.36px] font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif] hidden lg:block">
                 Cart
               </span>
