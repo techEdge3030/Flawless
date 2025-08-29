@@ -95,7 +95,7 @@ export default function CuratedCollectionSection() {
             {/* Slider Container */}
             <div className="overflow-hidden">
               {/* Desktop: Show 4 items */}
-              <div className="hidden lg:grid lg:grid-cols-4 gap-4">
+              <div className="hidden lg:grid lg:grid-cols-3 gap-4">
                 {getVisibleSlides().map((item, index) => (
                   <div
                     key={`${item.id}-${currentSlide}-${index}`}
