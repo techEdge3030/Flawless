@@ -68,7 +68,7 @@ export default function GuidesSection() {
           {/* Left Arrow */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-3 hover:opacity-80 transition-opacity duration-200 group"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-3 hover:opacity-80 transition-opacity duration-200"
             aria-label="Previous guides"
           >
             <svg
@@ -91,7 +91,7 @@ export default function GuidesSection() {
           {/* Right Arrow */}
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-3 hover:opacity-80 transition-opacity duration-200 group"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-3 hover:opacity-80 transition-opacity duration-200"
             aria-label="Next guides"
           >
             <svg
