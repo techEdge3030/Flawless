@@ -161,7 +161,7 @@ export default function CuratedCollectionSection() {
                       key={`${item.id}-${currentSlide}-${index}`}
                       className="group cursor-pointer"
                     >
-                      <div className="relative aspect-[3/4] bg-stone-50 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mb-4 mx-auto max-w-xs">
+                      <div className="relative aspect-[3/5] bg-stone-50 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mb-4 mx-auto max-w-xs">
                         <Image
                           src={item.image}
                           alt={item.alt}
