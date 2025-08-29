@@ -91,7 +91,7 @@ export default function NewTrendingSection() {
           </div>
 
           {/* Right Section - Image Slider */}
-          <div className="lg:col-span-5 relative flex flex-col">
+          <div className="lg:col-span-9 relative flex flex-col">
             {/* Only Right Arrow */}
             <button
               onClick={nextSlide}
