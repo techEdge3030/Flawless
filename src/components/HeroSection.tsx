@@ -120,7 +120,6 @@ export default function HeroSection() {
             <Link
               href="/book-appointment"
               className="bg-transparent border-2 border-white text-white flex items-center justify-center w-[350px] h-[45px] text-[16px] font-normal uppercase leading-[150%] tracking-[0.16px] hover:bg-white hover:text-black transition-colors duration-300 text-center font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]"
-              style={{ color: '#000' }}
             >
               Book Your Appointment
             </Link>
