@@ -100,13 +100,10 @@ export default function HeroSection() {
           {/* Description */}
           <div className="max-w-3xl mx-auto mb-8 sm:mb-12">
             <p className="text-white text-[20px] leading-[150%] tracking-[-0.22px] text-center font-[Helvetica_Now_Text,_-apple-system,_Roboto,_Helvetica,_sans-serif]">
-              <span className="font-bold">
-                Handcrafted by our expert Hatton Garden Jewellers,
-              </span>
-              <span className="font-normal">
-                our diamond engagement rings are British heritage, heirloom-quality pieces. Every ring is a promise: exquisitely designed, consciously crafted and perfected to last lifetimes.
-Time to share your love story.
-              </span>
+              <span className="font-bold">Handcrafted by our expert Hatton Garden Jewellers, our diamond engagement</span><br />
+              <span className="font-normal">rings are British heritage, heirloom-quality pieces. Every ring is a promise:</span><br />
+              <span className="font-normal">exquisitely designed, consciously crafted and perfected to last lifetimes.</span><br />
+              <span className="font-normal">Time to share your love story.</span>
             </p>
           </div>
 
