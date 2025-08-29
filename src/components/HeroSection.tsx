@@ -1,44 +1,113 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function HeroSection() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    {
+      id: 1,
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fdb7cf6075ca848d3bdb7e775ee5e9d74%2Ff6a6f4fa75f4474f9519dde3fca179e8?format=webp&width=2000",
+      alt: "Hands showcasing engagement rings",
+    },
+    {
+      id: 2,
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fdb7cf6075ca848d3bdb7e775ee5e9d74%2Fea67d7d4fe884c37921d3e6f75a10a5a?format=webp&width=2000",
+      alt: "Elegant rings on fabric background",
+    },
+  ];
+
+  // Auto-advance slider every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [slides.length]);
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-stone-800 via-stone-700 to-stone-600 overflow-hidden">
-      {/* Background Images */}
+      {/* Banner Slider */}
       <div className="absolute inset-0">
-        {/* Left image - hands with rings */}
-        <div className="absolute left-0 top-0 w-1/2 h-full">
-          <Image
-            src="https://api.builder.io/api/v1/image/assets/TEMP/a56b4c3e5efe8b9c7e3cfbcf2312c4f8dd010431?width=1389"
-            alt="Hands showing engagement rings"
-            fill
-            className="object-cover object-center opacity-40"
-          />
-        </div>
-
-        {/* Right image - additional ring showcase */}
-        <div className="absolute right-0 top-0 w-1/2 h-full">
-          <Image
-            src="https://api.builder.io/api/v1/image/assets/TEMP/1b9a1aee46dc43e6f0f28779037ddb8845972e29?width=1658"
-            alt="Ring showcase"
-            fill
-            className="object-cover object-center opacity-30"
-          />
-        </div>
-
-        {/* Center overlay image */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-full">
-          <Image
-            // src="https://api.builder.io/api/v1/image/assets/TEMP/1b3e7fd22e3325ea58eaeaec5c7232fe8b232e91?width=1418"
-            src="https://api.builder.io/api/v1/image/assets/TEMP/8b413c852bea076224c73850eba9b33ec328c3f1?width=2562"
-            alt="Featured ring"
-            fill
-            className="object-cover object-center opacity-50"
-          />
-        </div>
+        {slides.map((slide, index) => (
+          <div
+            key={slide.id}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              index === currentSlide ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <Image
+              src={slide.image}
+              alt={slide.alt}
+              fill
+              className="object-cover object-center"
+              priority={index === 0}
+            />
+          </div>
+        ))}
 
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/40"></div>
+      </div>
+
+      {/* Slider Controls */}
+      <div className="absolute inset-0 flex items-center justify-between px-4 sm:px-6 lg:px-8 z-20">
+        {/* Previous Button */}
+        <button
+          onClick={prevSlide}
+          className="p-2 rounded-full bg-black/20 hover:bg-black/40 text-white transition-colors duration-200 backdrop-blur-sm"
+          aria-label="Previous slide"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </button>
+
+        {/* Next Button */}
+        <button
+          onClick={nextSlide}
+          className="p-2 rounded-full bg-black/20 hover:bg-black/40 text-white transition-colors duration-200 backdrop-blur-sm"
+          aria-label="Next slide"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </button>
       </div>
 
       {/* Content */}
@@ -85,8 +154,24 @@ export default function HeroSection() {
         </div>
       </div>
 
+      {/* Slide Indicators */}
+      <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`w-3 h-3 rounded-full transition-colors duration-200 ${
+              index === currentSlide
+                ? "bg-white"
+                : "bg-white/50 hover:bg-white/75"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce z-20">
         <svg
           className="w-6 h-6"
           fill="none"
