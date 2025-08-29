@@ -65,49 +65,25 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/40"></div>
       </div>
 
-      {/* Slider Controls */}
-      <div className="absolute inset-0 flex items-center justify-between px-4 sm:px-6 lg:px-8 z-20">
-        {/* Previous Button */}
-        <button
+      {/* Hover Navigation Areas */}
+      <div className="absolute inset-0 flex z-20">
+        {/* Left hover area */}
+        <div
           onClick={prevSlide}
-          className="p-2 rounded-full bg-black/20 hover:bg-black/40 text-white transition-colors duration-200 backdrop-blur-sm"
+          className="w-1/2 h-full cursor-pointer relative group"
           aria-label="Previous slide"
         >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
-        </button>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </div>
 
-        {/* Next Button */}
-        <button
+        {/* Right hover area */}
+        <div
           onClick={nextSlide}
-          className="p-2 rounded-full bg-black/20 hover:bg-black/40 text-white transition-colors duration-200 backdrop-blur-sm"
+          className="w-1/2 h-full cursor-pointer relative group"
           aria-label="Next slide"
         >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </button>
+          <div className="absolute inset-0 bg-gradient-to-l from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </div>
       </div>
 
       {/* Content */}
