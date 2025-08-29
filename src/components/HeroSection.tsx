@@ -108,10 +108,10 @@ export default function HeroSection() {
           </div>
 
           {/* Call to Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center z-30 relative">
             <Link
               href="/engagement"
-              className="bg-white text-black flex items-center justify-center w-[350px] h-[44px] text-[16px] font-normal uppercase leading-[150%] tracking-[0.16px] hover:bg-stone-100 transition-colors duration-300 text-center font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]"
+              className="bg-white flex items-center justify-center w-[350px] h-[44px] text-[16px] font-semibold uppercase leading-[150%] tracking-[0.16px] hover:bg-stone-100 transition-colors duration-300 text-center font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]"
               style={{ color: '#000' }}
             >
               Shop Engagement Rings
@@ -119,7 +119,7 @@ export default function HeroSection() {
 
             <Link
               href="/book-appointment"
-              className="bg-transparent border-2 border-white text-white flex items-center justify-center w-[350px] h-[45px] text-[16px] font-normal uppercase leading-[150%] tracking-[0.16px] hover:bg-white hover:text-black transition-colors duration-300 text-center font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]"
+              className="bg-transparent border-2 border-white text-white flex items-center justify-center w-[350px] h-[45px] text-[16px] font-semibold uppercase leading-[150%] tracking-[0.16px] hover:bg-white hover:text-black transition-colors duration-300 text-center font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]"
             >
               Book Your Appointment
             </Link>
