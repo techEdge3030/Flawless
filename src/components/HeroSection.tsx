@@ -111,14 +111,16 @@ export default function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
             <Link
               href="/engagement"
-              className="bg-white text-black px-8 py-4 text-[16px] font-semibold uppercase leading-[150%] tracking-[0.16px] hover:bg-stone-100 transition-colors duration-300 min-w-[280px] text-center font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]"
+              className="bg-white text-black flex items-center justify-center w-[350px] h-[44px] text-[16px] font-normal uppercase leading-[150%] tracking-[0.16px] hover:bg-stone-100 transition-colors duration-300 text-center font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]"
+              style={{ color: '#000' }}
             >
               Shop Engagement Rings
             </Link>
 
             <Link
               href="/book-appointment"
-              className="bg-transparent border-2 border-white text-white px-8 py-4 text-[16px] font-semibold uppercase leading-[150%] tracking-[0.16px] hover:bg-white hover:text-black transition-colors duration-300 min-w-[280px] text-center font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]"
+              className="bg-transparent border-2 border-white text-white flex items-center justify-center w-[350px] h-[45px] text-[16px] font-normal uppercase leading-[150%] tracking-[0.16px] hover:bg-white hover:text-black transition-colors duration-300 text-center font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]"
+              style={{ color: '#000' }}
             >
               Book Your Appointment
             </Link>
