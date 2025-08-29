@@ -23,6 +23,7 @@ export default function Home() {
       <ShopByStyleSection />
       <DiamondShapesSection />
       <JewelleryCollectionSection />
+      <CuratedCollectionSection />
       <DesignBespokeSection />
       <NewTrendingSection />
       <ColoredDiamondsSection />
