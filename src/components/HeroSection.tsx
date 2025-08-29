@@ -114,14 +114,14 @@ Time to share your love story.
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
             <Link
               href="/engagement"
-              className="bg-white text-black px-8 py-4 text-base font-semibold uppercase tracking-wide hover:bg-stone-100 transition-colors duration-300 min-w-[280px] text-center"
+              className="bg-white text-black px-8 py-4 text-[16px] font-semibold uppercase leading-[150%] tracking-[0.16px] hover:bg-stone-100 transition-colors duration-300 min-w-[280px] text-center font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]"
             >
               Shop Engagement Rings
             </Link>
 
             <Link
               href="/book-appointment"
-              className="bg-transparent border-2 border-white text-white px-8 py-4 text-base font-semibold uppercase tracking-wide hover:bg-white hover:text-black transition-colors duration-300 min-w-[280px] text-center"
+              className="bg-transparent border-2 border-white text-white px-8 py-4 text-[16px] font-semibold uppercase leading-[150%] tracking-[0.16px] hover:bg-white hover:text-black transition-colors duration-300 min-w-[280px] text-center font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]"
             >
               Book Your Appointment
             </Link>
