@@ -174,9 +174,10 @@ export default function Header() {
                 <Image
                   src={selectedLanguage.flag}
                   alt={selectedLanguage.code}
-                  width={24}
-                  height={24}
-                  className="w-6 h-6 rounded-full object-cover"
+                  width={32}
+                  height={32}
+                  className="w-6 h-6 rounded-full object-cover border border-gray-200"
+                  quality={95}
                 />
                 <span className="text-[12px] text-black font-semibold tracking-[0.36px] font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]">
                   {selectedLanguage.code}
