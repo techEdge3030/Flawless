@@ -73,7 +73,7 @@ export default function CuratedCollectionSection() {
       <div className="max-w-none mx-auto px-8">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8 items-stretch">
           {/* Left Section - Image Slider */}
-          <div className="lg:col-span-3 relative flex flex-col">
+          <div className="lg:col-span-4 relative flex flex-col">
             {/* Only Left Arrow */}
             <button
               onClick={prevSlide}
@@ -185,7 +185,7 @@ export default function CuratedCollectionSection() {
           </div>
 
           {/* Right Section - Content */}
-          <div className="lg:col-span-2 lg:pl-8 flex flex-col justify-center">
+          <div className="lg:col-span-1 lg:pl-6 flex flex-col justify-center">
             {/* Subtitle */}
             <div className="mb-3">
               <span className="font-hiragino text-xs lg:text-sm font-semibold text-black tracking-[1.26px] uppercase">
@@ -230,7 +230,7 @@ export default function CuratedCollectionSection() {
             </div>
 
             {/* Button */}
-            <button className="w-full border border-black bg-transparent text-black py-2 px-3 text-xs lg:text-sm font-semibold uppercase tracking-wide rounded hover:bg-black hover:text-white transition-all duration-200">
+            <button className="border border-black bg-transparent text-black py-2 px-3 text-xs lg:text-sm font-semibold uppercase tracking-wide rounded hover:bg-black hover:text-white transition-all duration-200 self-start">
               SHOP DIAMOND ENGAGEMENT RINGS
             </button>
           </div>
