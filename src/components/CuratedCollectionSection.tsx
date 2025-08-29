@@ -199,16 +199,38 @@ export default function CuratedCollectionSection() {
             </h2>
 
             {/* Description */}
-            <p className="font-helvetica text-base lg:text-lg font-medium text-black leading-[150%] tracking-[-0.198px] mb-8">
-              Let us choose you the perfect diamond. All you have to do is select
-              from Ring Designs that have been chosen over and over again as
-              perfect heirlooms. These engagement rings are crafted by hand using
-              sustainable methods and heritage techniques in Hatton Garden. They
-              are made to order and take 6-8 weeks to complete.
-            </p>
+            <div className="font-helvetica text-base lg:text-lg font-medium text-black leading-[150%] tracking-[-0.198px] mb-8">
+              <p className="mb-0">
+                Let us choose you the perfect diamond.
+              </p>
+              <p className="mb-0">
+                All you have to do is select from Ring
+              </p>
+              <p className="mb-0">
+                Designs that have been chosen over and
+              </p>
+              <p className="mb-0">
+                over again as perfect heirlooms. These
+              </p>
+              <p className="mb-0">
+                engagement rings are crafted by hand
+              </p>
+              <p className="mb-0">
+                using sustainable methods and heritage
+              </p>
+              <p className="mb-0">
+                techniques in Hatton Garden. They are
+              </p>
+              <p className="mb-0">
+                made to order and take 6-8 weeks to
+              </p>
+              <p>
+                complete.
+              </p>
+            </div>
 
             {/* Button */}
-            <button className="w-full bg-black text-white py-3 px-6 text-sm font-semibold uppercase tracking-wide hover:bg-gray-800 transition-colors duration-200">
+            <button className="w-full border-2 border-black bg-transparent text-black py-2 px-4 text-sm font-semibold uppercase tracking-wide hover:bg-black hover:text-white transition-all duration-200">
               SHOP DIAMOND ENGAGEMENT RINGS
             </button>
           </div>
