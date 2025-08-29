@@ -53,9 +53,11 @@ export default function DesignBespokeSection() {
             </div>
 
             {/* CTA Button */}
-            <button className="bg-[#A39186] text-white px-8 py-4 rounded text-sm font-semibold uppercase tracking-[0.36px] hover:bg-[#8B7F73] transition-colors mb-8 w-full max-w-[402px]">
-              BOOK A COMPLIMENTARY CONSULTATION
-            </button>
+            <div className="text-center mb-8">
+              <button className="bg-[#A39186] text-white px-8 py-4 rounded text-sm font-semibold uppercase tracking-[0.36px] hover:bg-[#8B7F73] transition-colors max-w-[402px]">
+                BOOK A COMPLIMENTARY CONSULTATION
+              </button>
+            </div>
 
             {/* Trust indicators */}
             <div className="text-center">
