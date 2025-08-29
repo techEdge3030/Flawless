@@ -10,13 +10,13 @@ export default function GuidesSection() {
       title: "How to choose the best Engagement Ring for your partner?",
       description:
         "Choosing the perfect engagement ring is a deeply personal process, and understanding your partner's preferences, lifestyle, and values will ensure you select something they'll treasure forever.",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fdb7cf6075ca848d3bdb7e775ee5e9d74%2F43b8391a7a504973932e09595941b178?format=webp&width=800",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fdb7cf6075ca848d3bdb7e775ee5e9d74%2Fdcb26964d5cc4a1f87e6b8a4863b40f9?format=webp&width=800",
     },
     {
       title: "Our Lab Grown Diamond Guide",
       description:
         "Lab grown diamonds are transforming luxury in the modern era—blending advanced science with responsible elegance.",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fdb7cf6075ca848d3bdb7e775ee5e9d74%2F56ac56e2a6bb45838040baef00ec5191?format=webp&width=800",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fdb7cf6075ca848d3bdb7e775ee5e9d74%2F01d7fcc2ed68482c88a9df97b120187d?format=webp&width=800",
     },
     {
       title: "How your Ring is Made",
