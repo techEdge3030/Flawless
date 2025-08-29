@@ -174,9 +174,13 @@ export default function Header() {
 
             {/* Language Dropdown */}
             <div className="relative">
-              <button className="flex items-center space-x-1 hover:bg-gray-100 px-3 py-2 rounded">
+              <button
+                className="flex items-center space-x-2 hover:bg-gray-100 px-3 py-2 rounded"
+                onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}
+              >
+                <span className="text-lg">{selectedLanguage.flag}</span>
                 <span className="text-[12px] text-black font-semibold tracking-[0.36px] font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]">
-                  GBP
+                  {selectedLanguage.code}
                 </span>
                 <svg
                   width="12"
@@ -184,7 +188,7 @@ export default function Header() {
                   viewBox="0 0 12 7"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-[10px] h-[5px]"
+                  className={`w-[10px] h-[5px] transition-transform ${isLanguageDropdownOpen ? 'rotate-180' : ''}`}
                 >
                   <path
                     d="M1.31494 0.316406L1.65381 0.636719L5.99756 4.73438L10.3481 0.639648L10.687 0.319336L11.0298 0.635742L11.3394 0.921875L11.7339 1.28613L11.3433 1.65332L6.33936 6.36426L5.99658 6.6875L5.65381 6.36328L0.657715 1.64941L0.26709 1.28125L0.661621 0.917969L0.972168 0.631836L1.31494 0.316406Z"
@@ -193,6 +197,32 @@ export default function Header() {
                   />
                 </svg>
               </button>
+
+              {/* Dropdown Menu */}
+              {isLanguageDropdownOpen && (
+                <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                  {languages.map((language) => (
+                    <button
+                      key={language.code}
+                      className="w-full flex items-center space-x-3 px-4 py-3 text-left hover:bg-gray-50 first:rounded-t-lg last:rounded-b-lg"
+                      onClick={() => {
+                        setSelectedLanguage(language);
+                        setIsLanguageDropdownOpen(false);
+                      }}
+                    >
+                      <span className="text-lg">{language.flag}</span>
+                      <div className="flex flex-col">
+                        <span className="text-[12px] text-black font-semibold tracking-[0.36px] font-[Hiragino_Sans_GB,_-apple-system,_Roboto,_Helvetica,_sans-serif]">
+                          {language.code}
+                        </span>
+                        <span className="text-[10px] text-gray-600 font-normal">
+                          {language.name}
+                        </span>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* Mobile Menu Button */}
