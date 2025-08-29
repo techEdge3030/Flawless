@@ -70,7 +70,7 @@ export default function CuratedCollectionSection() {
 
   return (
     <section className="py-16 px-4 lg:px-8">
-      <div className="max-w-none mx-auto px-8">
+      <div className="max-w-7xl mx-auto px-8">
         <div className="grid grid-cols-1 lg:grid-cols-7 gap-6 lg:gap-4 items-stretch">
           {/* Left Section - Image Slider */}
           <div className="lg:col-span-5 relative flex flex-col">
